@@ -128,11 +128,86 @@
     opacity: 0;
   }
   
+  /* 文字轮播样式 */
+  .text-carousel-wrapper {
+    @apply relative inline-block;
+    min-width: 120px;
+  }
+
+  .text-carousel-inner {
+    @apply relative inline-block;
+  }
+
+  .text-carousel-container {
+    @apply relative inline-block;
+  }
+
+  .text-carousel-text {
+    @apply inline-block;
+  }
+
+  /* 文字轮播过渡动画 - 左右滑动效果 */
+  .text-carousel-wrapper .text-slide-enter-active {
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out !important;
+  }
+
+  .text-carousel-wrapper .text-slide-leave-active {
+    transition: opacity 0.5s ease-in, transform 0.5s ease-in !important;
+  }
+
+  .text-carousel-wrapper .text-slide-enter-from {
+    opacity: 0 !important;
+    transform: translateX(20px) !important;
+  }
+
+  .text-carousel-wrapper .text-slide-enter-to {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+
+  .text-carousel-wrapper .text-slide-leave-from {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+  }
+
+  .text-carousel-wrapper .text-slide-leave-to {
+    opacity: 0 !important;
+    transform: translateX(-20px) !important;
+  }
+
+  /* 动态文本渐变 - 组合使用 */
+  .text-gradient-dynamic.gradient-blue {
+    @apply bg-gradient-to-r bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #0284c7 0%, #075985 100%);
+  }
+
+  .text-gradient-dynamic.gradient-green {
+    @apply bg-gradient-to-r bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #059669 0%, #047857 100%);
+  }
+
+  .text-gradient-dynamic.gradient-purple {
+    @apply bg-gradient-to-r bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+  }
+
+  .text-gradient-dynamic.gradient-orange {
+    @apply bg-gradient-to-r bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+  }
+
+  .text-gradient-dynamic.gradient-pink {
+    @apply bg-gradient-to-r bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #db2777 0%, #be185d 100%);
+  }
+
+
+
   /* 特殊效果 */
   .glass-effect {
     @apply bg-white/80 backdrop-blur-sm border border-white/20;
   }
-  
+
   .glow-effect {
     box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
   }

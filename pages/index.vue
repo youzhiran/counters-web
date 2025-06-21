@@ -6,7 +6,7 @@
         <div class="text-center animate-on-scroll">
           <h1 class="text-responsive-xl font-bold text-gray-900 mb-6">
             让桌游计分变得
-            <span class="text-gradient">简单有趣</span>
+            <TextCarousel />
           </h1>
           <p class="text-responsive-md text-gray-600 mb-8 max-w-3xl mx-auto">
             支持多种桌游类型，局域网实时同步，让每一局游戏都精彩纷呈
