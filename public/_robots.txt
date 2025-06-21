@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://counters.devyi.com/sitemap.xml

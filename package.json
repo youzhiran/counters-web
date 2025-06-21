@@ -1,0 +1,33 @@
+{
+  "name": "counters-website",
+  "version": "1.0.0",
+  "description": "Official website for Counters - A Flutter board game scoring app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "setup": "node scripts/setup.js",
+    "lint": "eslint .",
+    "type-check": "nuxt typecheck"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxt/image": "^1.8.1",
+    "@nuxtjs/tailwindcss": "^6.12.1",
+    "@types/node": "^22.10.2",
+    "nuxt": "^3.14.1592",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.23",
+    "@heroicons/vue": "^2.2.0",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@vueuse/core": "^11.3.0",
+    "@vueuse/nuxt": "^11.3.0",
+    "nuxt-schema-org": "^5.0.5",
+    "vue": "^3.5.13"
+  }
+}

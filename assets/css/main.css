@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans text-gray-900 antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+  
+  /* 中文字体优化 */
+  .font-chinese {
+    font-family: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  }
+}
+
+@layer components {
+  /* 苹果风格按钮 */
+  .btn-apple {
+    @apply inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-apple transition-all duration-200 ease-in-out;
+  }
+  
+  .btn-primary {
+    @apply btn-apple bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800 shadow-apple hover:shadow-apple-lg;
+  }
+  
+  .btn-secondary {
+    @apply btn-apple bg-white text-gray-900 border border-gray-300 hover:bg-gray-50 active:bg-gray-100 shadow-apple hover:shadow-apple-lg;
+  }
+  
+  .btn-ghost {
+    @apply btn-apple text-gray-600 hover:text-gray-900 hover:bg-gray-100 active:bg-gray-200;
+  }
+  
+  /* 卡片样式 */
+  .card-apple {
+    @apply bg-white rounded-apple-lg shadow-apple border border-gray-100 overflow-hidden;
+  }
+  
+  .card-apple-hover {
+    @apply card-apple transition-all duration-300 hover:shadow-apple-lg hover:-translate-y-1;
+  }
+  
+  /* 容器样式 */
+  .container-apple {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* 渐变背景 */
+  .gradient-bg {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  }
+  
+  /* 文本渐变 */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent;
+  }
+  
+  /* 导航样式 */
+  .nav-link {
+    @apply text-gray-600 hover:text-gray-900 px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200;
+  }
+  
+  .nav-link-active {
+    @apply nav-link text-primary-600 bg-primary-50;
+  }
+  
+  /* 响应式文本 */
+  .text-responsive-xl {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+  }
+  
+  .text-responsive-lg {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+  }
+  
+  .text-responsive-md {
+    @apply text-lg sm:text-xl md:text-2xl;
+  }
+  
+  /* 简化的动画类 - 内容始终可见，只添加微妙的过渡效果 */
+  .animate-on-scroll {
+    @apply opacity-100 translate-y-0 transition-all duration-300 ease-out;
+  }
+
+  /* 当元素进入视口时的微妙动画效果 */
+  .animate-on-scroll.in-view {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* 确保页面切换时内容立即可见 */
+  .page-enter-active .animate-on-scroll,
+  .page-leave-active .animate-on-scroll {
+    @apply opacity-100 translate-y-0;
+  }
+
+  /* 页面过渡效果 */
+  .page-enter-active,
+  .page-leave-active {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .page-enter-from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .page-leave-to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  /* 布局过渡效果 */
+  .layout-enter-active,
+  .layout-leave-active {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .layout-enter-from,
+  .layout-leave-to {
+    opacity: 0;
+  }
+  
+  /* 特殊效果 */
+  .glass-effect {
+    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+  }
+  
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(14, 165, 233, 0.3);
+  }
+}
+
+@layer utilities {
+  /* 隐藏滚动条但保持功能 */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* 文本省略 */
+  .text-ellipsis-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .text-ellipsis-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
