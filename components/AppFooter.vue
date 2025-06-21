@@ -94,9 +94,9 @@
           © 2025 counters.devyi.com. 保留所有权利。
         </p>
         <div class="flex space-x-6 mt-4 md:mt-0">
-          <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">
+          <NuxtLink to="/privacy-policy" class="text-gray-400 hover:text-white text-sm transition-colors">
             隐私政策
-          </a>
+          </NuxtLink>
           <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">
             使用条款
           </a>
