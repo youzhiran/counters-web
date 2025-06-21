@@ -13,11 +13,10 @@ export default defineNuxtConfig({
 
   googleFonts: {
     families: {
-      'Inter': [300, 400, 500, 600, 700],
-      'Noto Sans SC': [300, 400, 500, 600, 700]
+      // 使用系统字体，不需要从Google Fonts加载
     },
     display: 'swap',
-    preload: true
+    preload: false
   },
 
   app: {

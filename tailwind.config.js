@@ -11,8 +11,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sans': ['Inter', 'Noto Sans SC', 'system-ui', 'sans-serif'],
-        'chinese': ['Noto Sans SC', 'system-ui', 'sans-serif']
+        'sans': ['PingFang SC', 'HarmonyOS_Regular', 'Helvetica Neue', 'Microsoft YaHei', 'sans-serif'],
+        'chinese': ['PingFang SC', 'HarmonyOS_Regular', 'Helvetica Neue', 'Microsoft YaHei', 'sans-serif']
       },
       colors: {
         primary: {

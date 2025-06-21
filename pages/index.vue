@@ -99,7 +99,7 @@
           </div>
           <div class="animate-on-scroll">
             <div class="text-4xl font-bold text-primary-600 mb-2">多平台</div>
-            <div class="text-lg text-gray-600">Android/Windows{macOS/Linux}</div>
+            <div class="text-lg text-gray-600">Android/Windows (待适配：macOS/Linux)</div>
           </div>
           <div class="animate-on-scroll">
             <div class="text-4xl font-bold text-primary-600 mb-2">开源</div>
