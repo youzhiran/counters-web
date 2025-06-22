@@ -64,7 +64,7 @@
           <div class="order-2 lg:order-1 animate-on-scroll">
             <div class="bg-white rounded-apple-xl p-8">
               <NuxtImg
-                src="/screenshots/lan-connection.png"
+                src="/screenshots/main-interface.png"
                 alt="局域网联机界面"
                 class="w-full h-auto rounded-apple-lg shadow-apple"
                 placeholder
