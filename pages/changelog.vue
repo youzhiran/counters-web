@@ -95,7 +95,7 @@ useSeoMeta({
 const versions = [
   {
     version: 'v0.10.7-rc3',
-    date: '2025年1月',
+    date: '2025年6月',
     type: 'release',
     features: [
       '全新设计的局域网联机状态，信息更详细，支持重连、管理等功能',
@@ -109,7 +109,7 @@ const versions = [
   },
   {
     version: 'v0.10.5-rc2',
-    date: '2024年12月',
+    date: '2025年6月',
     type: 'release',
     features: [],
     improvements: [
@@ -120,7 +120,7 @@ const versions = [
   },
   {
     version: 'v0.10.4-rc1',
-    date: '2024年11月',
+    date: '2025年6月',
     type: 'release',
     features: [
       '新增麻将模板，支持显示为 2 位小数计分',
@@ -146,7 +146,7 @@ const versions = [
   },
   {
     version: 'v0.9.14-rc1',
-    date: '2024年9月',
+    date: '2025年4月',
     type: 'release',
     features: [
       '全新设计的计分流程及玩家管理',

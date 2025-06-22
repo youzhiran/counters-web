@@ -42,7 +42,7 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   phrases: () => ['简单有趣', '无需纸笔', '安全可靠', '清爽无广', '直观清晰'],
   gradientClasses: () => ['gradient-blue', 'gradient-green', 'gradient-purple', 'gradient-orange', 'gradient-pink'],
-  interval: 3500, // 每个文字显示3.5秒
+  interval: 3000, // 每个文字显示3.0秒
   pauseOnHover: true
 })
 
