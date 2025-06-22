@@ -207,7 +207,7 @@
             </NuxtLink>
             <NuxtLink
               to="/guide"
-              class="btn-secondary border-white text-white hover:bg-white/10"
+              class="btn-apple bg-transparent border-white text-white hover:bg-white/10 shadow-apple hover:shadow-apple-lg"
             >
               查看使用指南
             </NuxtLink>

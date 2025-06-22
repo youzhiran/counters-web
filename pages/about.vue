@@ -182,7 +182,7 @@
               href="https://github.com/youzhiran/counters/issues"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn-secondary border-white text-white hover:bg-white/10"
+              class="btn-apple bg-transparent border-white text-white hover:bg-white/10 shadow-apple hover:shadow-apple-lg"
             >
               问题反馈
             </a>
