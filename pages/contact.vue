@@ -226,7 +226,7 @@ const contactChannels = [
     title: '开发者网站',
     description: '访问开发者个人网站了解更多信息',
     icon: '🌐',
-    link: 'https://counters.devyi.com',
+    link: 'https://www.devyi.com',
     action: '访问网站'
   },
   {
