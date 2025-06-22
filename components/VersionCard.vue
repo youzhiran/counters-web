@@ -14,7 +14,7 @@
               : 'bg-blue-100 text-blue-800'
           ]"
         >
-          {{ version.type === 'release' ? '正式版' : '测试版' }}
+          {{ version.type === 'release' ? '预正式版' : '测试版' }}
         </span>
       </div>
       <span class="text-gray-500 text-sm">

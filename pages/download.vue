@@ -189,7 +189,7 @@ const platforms: Platform[] = [
     description: '推荐平台，功能最完整',
     version: 'Android 5.0+',
     size: '约11MB',
-    downloadUrl: `${$config.public.releasesUrl}/latest/download/counters-0.10.7-rc3-android.apk`,
+    downloadUrl: `${$config.public.releasesUrl}/download/v0.10.7-rc3/counters-0.10.7-rc3-android-arm64-v8a.apk`,
     recommended: true,
     status: 'recommended'
   },
@@ -199,7 +199,7 @@ const platforms: Platform[] = [
     description: '桌面端体验，功能完整',
     version: 'Windows 10+',
     size: '约13MB',
-    downloadUrl: `${$config.public.releasesUrl}/latest/download/counters-0.10.7-rc3-windows-amd64.zip`,
+    downloadUrl: `${$config.public.releasesUrl}/download/v0.10.7-rc3/counters-0.10.7-rc3-windows-x64.zip`,
     recommended: true,
     status: 'recommended'
   },

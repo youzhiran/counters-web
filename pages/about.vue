@@ -121,6 +121,8 @@
                   <p>• 图标资源来源：</p>
                   <p class="ml-4">- iconscout.com</p>
                   <p class="ml-4">- yesicon.app</p>
+                  <p>• 特别致谢：</p>
+                  <p class="ml-4">- Linux.do - 提供 AI 交流社区</p>
                 </div>
               </div>
             </div>
