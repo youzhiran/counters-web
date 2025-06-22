@@ -14,12 +14,12 @@
       class="fixed top-0 left-0 right-0 bg-gradient-to-r from-amber-400 via-orange-400 to-orange-500 text-white shadow-lg z-[9999]"
     >
       <div class="container-apple">
-        <div class="flex items-center justify-between py-3 sm:py-4">
+        <div class="flex items-center justify-between py-3 sm:py-4 gap-3">
           <!-- 通知内容 -->
-          <div class="flex items-center space-x-3 flex-1 min-w-0">
+          <div class="flex items-center space-x-2 sm:space-x-3 flex-1 min-w-0">
             <!-- 警告图标 -->
             <div class="flex-shrink-0">
-              <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" fill="currentColor" viewBox="0 0 20 20">
                 <path
                   fill-rule="evenodd"
                   d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"
@@ -30,7 +30,7 @@
 
             <!-- 通知文本 -->
             <div class="flex-1 min-w-0">
-              <p class="text-sm sm:text-base font-medium text-center sm:text-left truncate sm:whitespace-normal">
+              <p class="text-xs sm:text-sm md:text-base font-medium text-center sm:text-left">
                 {{ message }}
               </p>
             </div>
@@ -40,11 +40,11 @@
           <button
             v-if="closable"
             @click="closeBanner"
-            class="flex-shrink-0 ml-3 sm:ml-4 p-1.5 rounded-lg hover:bg-white/20 focus:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-200"
+            class="flex-shrink-0 p-1 sm:p-1.5 rounded-lg hover:bg-white/20 focus:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/50 transition-all duration-200"
             aria-label="关闭通知横幅"
             title="关闭通知"
           >
-            <svg class="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -69,7 +69,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  message: '本网站目前使用AI根据APP代码生成，不保证内容正确性；Counters 现处于开发阶段，仍可能出现错误，欢迎试用并提供反馈。',
+  message: '本网站内容目前使用 AI 生成，不保证内容准确性；Counters 现处于开发阶段，仍可能出现错误，欢迎试用并提供反馈。',
   closable: true
 })
 
@@ -144,9 +144,38 @@ defineExpose({
   }
 }
 
+/* 超小屏幕优化 */
+@media (max-width: 360px) {
+  .container-apple {
+    @apply px-1.5;
+  }
+}
+
 /* 增强关闭按钮的可访问性 */
 button:focus {
   outline: 2px solid rgba(255, 255, 255, 0.5);
   outline-offset: 2px;
+}
+
+/* 确保文本在移动设备上有足够的行高和换行 */
+@media (max-width: 640px) {
+  p {
+    line-height: 1.4;
+    white-space: normal;
+    word-break: break-word;
+    hyphens: auto;
+  }
+}
+
+/* 优化移动端的垂直间距 */
+@media (max-width: 480px) {
+  .flex.justify-between {
+    @apply py-2.5;
+  }
+
+  p {
+    font-size: 0.75rem;
+    line-height: 1.3;
+  }
 }
 </style>
