@@ -19,16 +19,16 @@
           <h2 class="text-2xl font-bold text-gray-900 mb-8 text-center animate-on-scroll">
             快速开始
           </h2>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-4">
             <GuideStep
-              v-for="(step, index) in quickStartSteps"
-              :key="step.title"
-              :step="index + 1"
-              :title="step.title"
-              :description="step.description"
-              :icon="step.icon"
-              class="animate-on-scroll"
+                v-for="(step, index) in quickStartSteps"
+                :key="step.title"
+                :step="index + 1"
+                :title="step.title"
+                :description="step.description"
+                :icon="step.icon"
+                class="animate-on-scroll"
             />
           </div>
         </div>
@@ -42,13 +42,13 @@
           <h2 class="text-2xl font-bold text-gray-900 mb-12 text-center animate-on-scroll">
             详细教程
           </h2>
-          
+
           <div class="space-y-12">
             <!-- 安装指南 -->
             <GuideSection
-              title="安装指南"
-              icon="📱"
-              class="animate-on-scroll"
+                title="安装指南"
+                icon="📱"
+                class="animate-on-scroll"
             >
               <div class="space-y-6">
                 <div>
@@ -60,7 +60,7 @@
                     <li>4. 安装完成后即可使用</li>
                   </ol>
                 </div>
-                
+
                 <div>
                   <h4 class="font-semibold text-gray-900 mb-3">Windows 安装</h4>
                   <ol class="space-y-2 text-gray-600 ml-4">
@@ -75,9 +75,9 @@
 
             <!-- 模板管理 -->
             <GuideSection
-              title="模板管理"
-              icon="📋"
-              class="animate-on-scroll"
+                title="模板管理"
+                icon="📋"
+                class="animate-on-scroll"
             >
               <div class="space-y-4">
                 <p class="text-gray-600">
@@ -86,15 +86,16 @@
                 <div class="space-y-3">
                   <div>
                     <h4 class="font-medium text-gray-900">创建新模板</h4>
-                    <p class="text-gray-600 text-sm">进入"模板"页面 → 点击"+"按钮 → 选择游戏类型 → 设置参数</p>
+                    <p class="text-gray-600 text-sm">进入"模板"页面 → 点击需要的系统模板 → 点击“编辑模板” → 设置参数 →
+                      点击右上角“另存为新模板”</p>
                   </div>
                   <div>
                     <h4 class="font-medium text-gray-900">编辑模板</h4>
-                    <p class="text-gray-600 text-sm">长按模板卡片 → 选择"编辑" → 修改设置 → 保存</p>
+                    <p class="text-gray-600 text-sm">选择模板卡片 → 点击"编辑模板" → 修改设置 → 保存模板</p>
                   </div>
                   <div>
                     <h4 class="font-medium text-gray-900">复制模板</h4>
-                    <p class="text-gray-600 text-sm">基于现有模板快速创建新模板，节省设置时间</p>
+                    <p class="text-gray-600 text-sm">可基于现有模板快速创建新模板，节省设置时间</p>
                   </div>
                 </div>
               </div>
@@ -102,9 +103,9 @@
 
             <!-- 玩家管理 -->
             <GuideSection
-              title="玩家管理"
-              icon="👥"
-              class="animate-on-scroll"
+                title="玩家管理"
+                icon="👥"
+                class="animate-on-scroll"
             >
               <div class="space-y-4">
                 <p class="text-gray-600">
@@ -129,9 +130,9 @@
 
             <!-- 局域网联机 -->
             <GuideSection
-              title="局域网联机"
-              icon="🌐"
-              class="animate-on-scroll"
+                title="局域网联机"
+                icon="🌐"
+                class="animate-on-scroll"
             >
               <div class="space-y-4">
                 <p class="text-gray-600">
@@ -140,11 +141,11 @@
                 <div class="space-y-3">
                   <div>
                     <h4 class="font-medium text-gray-900">创建主机</h4>
-                    <p class="text-gray-600 text-sm">主页 → 点击"连接到局域网计分" → 选择"创建主机"</p>
+                    <p class="text-gray-600 text-sm">任意计分 → 右上角选择"开启局域网联机" → 发现广播已同步开启</p>
                   </div>
                   <div>
                     <h4 class="font-medium text-gray-900">加入游戏</h4>
-                    <p class="text-gray-600 text-sm">其他设备选择"搜索游戏" → 找到主机 → 点击连接</p>
+                    <p class="text-gray-600 text-sm">主页 → 点击"连接到局域网计分" →  找到主机 → 点击连接</p>
                   </div>
                   <div>
                     <h4 class="font-medium text-gray-900">同步计分</h4>
@@ -165,16 +166,16 @@
           <h2 class="text-2xl font-bold text-gray-900 mb-12 text-center animate-on-scroll">
             高级功能
           </h2>
-          
+
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <AdvancedFeature
-              v-for="feature in advancedFeatures"
-              :key="feature.title"
-              :title="feature.title"
-              :description="feature.description"
-              :icon="feature.icon"
-              :tips="feature.tips"
-              class="animate-on-scroll"
+                v-for="feature in advancedFeatures"
+                :key="feature.title"
+                :title="feature.title"
+                :description="feature.description"
+                :icon="feature.icon"
+                :tips="feature.tips"
+                class="animate-on-scroll"
             />
           </div>
         </div>
@@ -188,14 +189,14 @@
           <h2 class="text-2xl font-bold text-gray-900 mb-12 text-center animate-on-scroll">
             常见问题
           </h2>
-          
+
           <div class="space-y-6">
             <FAQItem
-              v-for="faq in faqs"
-              :key="faq.question"
-              :question="faq.question"
-              :answer="faq.answer"
-              class="animate-on-scroll"
+                v-for="faq in faqs"
+                :key="faq.question"
+                :question="faq.question"
+                :answer="faq.answer"
+                class="animate-on-scroll"
             />
           </div>
         </div>
@@ -214,14 +215,14 @@
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <NuxtLink
-              to="/docs"
-              class="btn-primary bg-white text-primary-600 hover:bg-gray-50"
+                to="/docs"
+                class="btn-primary bg-white text-primary-600 hover:bg-gray-50"
             >
               技术文档
             </NuxtLink>
             <NuxtLink
-              to="/contact"
-              class="btn-apple bg-transparent border-white text-white hover:bg-white/10 shadow-apple hover:shadow-apple-lg"
+                to="/contact"
+                class="btn-apple bg-transparent border-white text-white hover:bg-white/10 shadow-apple hover:shadow-apple-lg"
             >
               联系支持
             </NuxtLink>
@@ -300,7 +301,7 @@ const faqs = [
   },
   {
     question: '局域网联机需要什么条件？',
-    answer: '所有设备需要连接到同一个 WiFi 网络，主机创建游戏后，其他设备可以搜索并加入。'
+    answer: '所有设备需要连接到同一个 WiFi/热点 网络，主机创建游戏后，其他设备可以搜索并加入。'
   },
   {
     question: '数据会丢失吗？',
@@ -308,7 +309,7 @@ const faqs = [
   },
   {
     question: '支持多少个玩家？',
-    answer: '理论上支持无限个玩家，但建议根据游戏类型和设备性能控制在合理范围内。'
+    answer: '根据不同模板支持的玩家数量也不同，但建议根据游戏类型和设备性能控制在合理范围内。'
   },
   {
     question: '如何更新应用？',
