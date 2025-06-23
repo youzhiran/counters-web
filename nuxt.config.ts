@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  
+
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
@@ -8,6 +8,9 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-schema-org'
   ],
+
+  // 允许内联脚本用于分析工具
+  ssr: true,
 
   css: ['~/assets/css/main.css'],
 
@@ -44,6 +47,18 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }
+      ],
+      script: [
+        {
+          innerHTML: `
+            (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "s3qts1pxwm");
+          `,
+          type: 'text/javascript'
+        }
       ]
     }
   },

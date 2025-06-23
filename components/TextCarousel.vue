@@ -1,22 +1,18 @@
 <template>
   <span
-    class="text-carousel-wrapper"
-    @mouseenter="pauseCarousel"
-    @mouseleave="resumeCarousel"
+      class="text-carousel-wrapper"
+      @mouseenter="pauseCarousel"
+      @mouseleave="resumeCarousel"
   >
     <span v-if="isClient" class="text-carousel-inner">
       <Transition
-        name="text-slide"
-        mode="out-in"
-        @before-enter="onBeforeEnter"
-        @enter="onEnter"
-        @before-leave="onBeforeLeave"
-        @leave="onLeave"
+          name="text-slide"
+          mode="out-in"
       >
         <span
-          :class="['text-gradient-dynamic', currentGradientClass]"
-          :key="currentPhraseIndex"
-          style="display: inline-block;"
+            :class="['text-gradient-dynamic', currentGradientClass]"
+            :key="currentPhraseIndex"
+            style="display: inline-block;"
         >
           {{ currentPhrase }}
         </span>
@@ -29,7 +25,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import {computed, onMounted, onUnmounted, ref} from 'vue'
 
 // 定义组件属性
 interface Props {
@@ -64,20 +60,12 @@ const nextPhrase = () => {
 
   const oldIndex = currentPhraseIndex.value
   currentPhraseIndex.value = (currentPhraseIndex.value + 1) % props.phrases.length
-
-  // 调试日志（仅在开发环境）
-  if (process.dev) {
-    console.log(`文字轮播: ${props.phrases[oldIndex]} -> ${props.phrases[currentPhraseIndex.value]}`)
-    console.log('当前索引:', currentPhraseIndex.value)
-    console.log('当前短语:', currentPhrase.value)
-    console.log('当前颜色类:', currentGradientClass.value)
-  }
 }
 
 // 启动轮播
 const startCarousel = () => {
   if (!isClient.value || intervalId) return
-  
+
   intervalId = setInterval(nextPhrase, props.interval)
 }
 
@@ -101,23 +89,6 @@ const resumeCarousel = () => {
   if (props.pauseOnHover) {
     isPaused.value = false
   }
-}
-
-// 过渡事件处理（用于调试）
-const onBeforeEnter = (el: Element) => {
-  console.log('动画：准备进入', el.textContent)
-}
-
-const onEnter = (el: Element) => {
-  console.log('动画：正在进入', el.textContent)
-}
-
-const onBeforeLeave = (el: Element) => {
-  console.log('动画：准备离开', el.textContent)
-}
-
-const onLeave = (el: Element) => {
-  console.log('动画：正在离开', el.textContent)
 }
 
 // 生命周期钩子
