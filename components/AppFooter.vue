@@ -97,11 +97,13 @@
           <NuxtLink to="/privacy-policy" class="text-gray-400 hover:text-white text-sm transition-colors">
             隐私政策
           </NuxtLink>
-          <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors">
+          <NuxtLink to="/privacy-policy" class="text-gray-400 hover:text-white text-sm transition-colors">
             使用条款
-          </a>
+          </NuxtLink>
         </div>
       </div>
     </div>
   </footer>
 </template>
+<script setup lang="ts">
+</script>

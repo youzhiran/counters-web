@@ -3,14 +3,19 @@
 @tailwind utilities;
 
 @layer base {
+  /* 定义全局CSS自定义属性 */
+  :root {
+    --notification-banner-height: 0px;
+  }
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply font-sans text-gray-900 antialiased;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold;
   }

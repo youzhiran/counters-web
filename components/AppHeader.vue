@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+  <header class="sticky z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 header-positioned">
     <nav class="container-apple">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
@@ -140,3 +140,11 @@ onMounted(() => {
   }
 })
 </script>
+
+<style scoped>
+/* 头部导航定位 - 根据横幅高度动态调整 */
+.header-positioned {
+  top: var(--notification-banner-height, 0px);
+  transition: top 0.3s ease-in-out;
+}
+</style>
