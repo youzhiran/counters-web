@@ -1,10 +1,10 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
+  compatibilityDate: '2025-06-24',
 
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxt/image',
-    '@nuxtjs/google-fonts',
     '@vueuse/nuxt',
     'nuxt-schema-org'
   ],
@@ -13,14 +13,6 @@ export default defineNuxtConfig({
   ssr: true,
 
   css: ['~/assets/css/main.css'],
-
-  googleFonts: {
-    families: {
-      // 使用系统字体，不需要从Google Fonts加载
-    },
-    display: 'swap',
-    preload: false
-  },
 
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
@@ -66,6 +58,13 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: ['/sitemap.xml']
+    }
+  },
+
+  // 解决中间件冲突警告
+  router: {
+    options: {
+      hashMode: false
     }
   },
 

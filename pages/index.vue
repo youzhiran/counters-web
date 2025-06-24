@@ -26,7 +26,7 @@
           <div class="relative max-w-4xl mx-auto">
             <div class="bg-white rounded-apple-xl shadow-apple-xl p-8">
               <NuxtImg
-                src="/screenshots/main-interface.png"
+                src="/screenshots/main-interface.webp"
                 alt="Counters 主界面截图"
                 class="w-full h-auto rounded-apple-lg"
                 loading="eager"
