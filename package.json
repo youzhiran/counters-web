@@ -11,7 +11,9 @@
     "postinstall": "nuxt prepare",
     "setup": "node scripts/setup.js",
     "lint": "eslint .",
-    "type-check": "nuxt typecheck"
+    "type-check": "nuxt typecheck",
+    "generate-privacy-version": "node scripts/generate-privacy-version.js",
+    "prebuild": "npm run generate-privacy-version"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
