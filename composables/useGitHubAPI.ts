@@ -123,9 +123,12 @@ export const useGitHubAPI = () => {
   const convertReleaseToVersion = (release: GitHubRelease): ParsedVersion => {
     const {features, improvements, fixes} = parseReleaseBody(release.body)
 
-    // 格式化日期
+    // 格式化日期 - 包含完整的年月日信息
     const publishDate = new Date(release.published_at)
-    const formattedDate = `${publishDate.getFullYear()}年${publishDate.getMonth() + 1}月`
+    const year = publishDate.getFullYear()
+    const month = publishDate.getMonth() + 1
+    const day = publishDate.getDate()
+    const formattedDate = `${year}年${month}月${day}日`
 
     // 计算总下载量
     const downloadCount = release.assets.reduce((total, asset) => total + asset.download_count, 0)

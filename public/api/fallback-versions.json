@@ -2,7 +2,7 @@
   "versions": [
     {
       "version": "v0.10.8-beta",
-      "date": "2025年6月",
+      "date": "2025年6月24日",
       "type": "beta",
       "features": [
         "新增启动时检查更新选项，支持不检查、正式版、测试版选项",
@@ -20,7 +20,7 @@
     },
     {
       "version": "v0.10.7-rc3",
-      "date": "2025年6月",
+      "date": "2025年6月19日",
       "type": "release",
       "features": [
         "全新设计的局域网联机状态，信息更详细，支持重连、管理等功能",
@@ -36,7 +36,7 @@
     },
     {
       "version": "v0.10.6-beta",
-      "date": "2025年6月",
+      "date": "2025年6月16日",
       "type": "beta",
       "features": [
         "全新设计的局域网联机状态，信息更详细，支持重连、管理等功能",
@@ -53,7 +53,7 @@
     },
     {
       "version": "v0.10.5-rc2",
-      "date": "2025年6月",
+      "date": "2025年6月12日",
       "type": "release",
       "features": [
         "新增 麻将 模板，支持显示为 2 位小数计分",
@@ -81,7 +81,7 @@
     },
     {
       "version": "v0.10.4-rc1",
-      "date": "2025年6月",
+      "date": "2025年6月11日",
       "type": "release",
       "features": [
         "新增 麻将 模板，支持显示为 2 位小数计分",
@@ -108,7 +108,7 @@
     },
     {
       "version": "v0.10.3-beta",
-      "date": "2025年6月",
+      "date": "2025年6月3日",
       "type": "beta",
       "features": [
         "新增字体选择功能",
@@ -127,7 +127,7 @@
     },
     {
       "version": "v0.9.14-rc1",
-      "date": "2025年4月",
+      "date": "2025年4月18日",
       "type": "release",
       "features": [
         "全新设计的计分流程及玩家管理，优化搜索玩家界面，玩家头像可显示emoji",
@@ -150,7 +150,7 @@
     },
     {
       "version": "v0.8.16-rc2",
-      "date": "2025年3月",
+      "date": "2025年3月6日",
       "type": "release",
       "features": [],
       "improvements": [],
@@ -161,7 +161,7 @@
     },
     {
       "version": "v0.8.15-rc1",
-      "date": "2025年3月",
+      "date": "2025年3月5日",
       "type": "release",
       "features": [],
       "improvements": [],
@@ -171,7 +171,7 @@
       "downloadCount": 2
     }
   ],
-  "generatedAt": "2025-06-25T03:16:01.353Z",
+  "generatedAt": "2025-06-25T04:24:03.369Z",
   "source": "github-api",
   "count": 9
 }
