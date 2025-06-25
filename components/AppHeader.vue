@@ -9,7 +9,7 @@
           </div>
           <span class="text-xl font-semibold text-gray-900">Counters</span>
         </NuxtLink>
-        
+
         <!-- 桌面导航 -->
         <div class="hidden md:flex items-center space-x-1">
           <NuxtLink
@@ -24,7 +24,7 @@
             {{ item.name }}
           </NuxtLink>
         </div>
-        
+
         <!-- 下载按钮和 GitHub 按钮 -->
         <div class="hidden md:flex items-center space-x-3">
           <a
@@ -45,13 +45,16 @@
             立即下载
           </NuxtLink>
         </div>
-        
+
         <!-- 移动端菜单按钮 -->
         <button
           @click="toggleMobileMenu"
           class="md:hidden p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100"
         >
-          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-8 h-8"
+fill="none"
+stroke="currentColor"
+viewBox="0 0 24 24">
             <path
               v-if="!isMobileMenuOpen"
               stroke-linecap="round"
@@ -69,7 +72,7 @@
           </svg>
         </button>
       </div>
-      
+
       <!-- 移动端菜单 -->
       <Transition
         enter-active-class="transition duration-200 ease-out"

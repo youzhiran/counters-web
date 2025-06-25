@@ -132,20 +132,6 @@ ai-web/
 - 字体预加载
 - SEO 元数据优化
 
-## 部署
-
-### Vercel (推荐)
-
-1. 连接 GitHub 仓库
-2. 自动检测 Nuxt.js 项目
-3. 一键部署
-
-### Netlify
-
-1. 连接 GitHub 仓库
-2. 构建命令: `npm run build`
-3. 发布目录: `.output/public`
-
 ### 自建服务器
 
 ```bash

@@ -27,7 +27,7 @@
             </a>
           </div>
         </div>
-        
+
         <!-- 快速链接 -->
         <div>
           <h3 class="text-lg font-semibold mb-4">快速链接</h3>
@@ -54,7 +54,7 @@
             </li>
           </ul>
         </div>
-        
+
         <!-- 支持 -->
         <div>
           <h3 class="text-lg font-semibold mb-4">支持</h3>
@@ -87,7 +87,7 @@
           </ul>
         </div>
       </div>
-      
+
       <!-- 底部版权 -->
       <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
         <p class="text-gray-400 text-sm">

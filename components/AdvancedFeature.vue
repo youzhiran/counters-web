@@ -8,11 +8,11 @@
         {{ title }}
       </h3>
     </div>
-    
+
     <p class="text-gray-600 mb-4">
       {{ description }}
     </p>
-    
+
     <div class="space-y-2">
       <div
         v-for="tip in tips"

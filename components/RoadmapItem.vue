@@ -18,7 +18,7 @@
         </span>
       </div>
     </div>
-    
+
     <p class="text-gray-600">
       {{ description }}
     </p>

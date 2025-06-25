@@ -9,8 +9,8 @@
         <span
           :class="[
             'px-3 py-1 rounded-full text-xs font-medium',
-            version.type === 'release' 
-              ? 'bg-green-100 text-green-800' 
+            version.type === 'release'
+              ? 'bg-green-100 text-green-800'
               : 'bg-blue-100 text-blue-800'
           ]"
         >

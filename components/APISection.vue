@@ -6,7 +6,7 @@
     <p class="text-gray-600 mb-4">
       {{ module.description }}
     </p>
-    
+
     <div class="space-y-2">
       <h4 class="font-medium text-gray-900 mb-2">主要方法：</h4>
       <ul class="space-y-1">

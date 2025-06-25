@@ -35,7 +35,7 @@
           <h2 class="text-2xl font-bold text-gray-900 mb-12 text-center animate-on-scroll">
             未来规划
           </h2>
-          
+
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <RoadmapItem
               v-for="item in roadmap"

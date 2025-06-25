@@ -11,17 +11,26 @@
     "postinstall": "nuxt prepare",
     "setup": "node scripts/setup.js",
     "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
     "type-check": "nuxt typecheck",
     "generate-privacy-version": "node scripts/generate-privacy-version.js",
     "prebuild": "npm run generate-privacy-version"
   },
   "devDependencies": {
+    "@eslint/js": "^9.29.0",
     "@nuxt/devtools": "latest",
+    "@nuxt/eslint-config": "^1.4.1",
     "@nuxt/image": "^1.8.1",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@types/node": "^22.10.2",
+    "@typescript-eslint/eslint-plugin": "^8.35.0",
+    "@typescript-eslint/parser": "^8.35.0",
+    "@vue/eslint-config-typescript": "^14.5.1",
+    "eslint": "^9.29.0",
+    "eslint-plugin-vue": "^10.2.0",
     "nuxt": "^3.14.1592",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "vue-eslint-parser": "^10.1.4"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.23",

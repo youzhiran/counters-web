@@ -8,7 +8,7 @@
         {{ title }}
       </h3>
     </div>
-    
+
     <div class="prose prose-gray max-w-none">
       <slot />
     </div>

@@ -6,9 +6,9 @@
         <div class="w-12 h-12 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center animate-pulse">
           <span class="text-white font-bold text-lg">C</span>
         </div>
-        <div class="absolute inset-0 w-12 h-12 border-2 border-primary-200 border-t-primary-600 rounded-lg animate-spin"></div>
+        <div class="absolute inset-0 w-12 h-12 border-2 border-primary-200 border-t-primary-600 rounded-lg animate-spin"/>
       </div>
-      
+
       <!-- 加载文本 -->
       <p class="text-sm text-gray-600 font-medium">加载中...</p>
     </div>

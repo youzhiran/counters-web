@@ -40,7 +40,10 @@
             aria-label="关闭通知横幅"
             title="关闭通知"
           >
-            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5"
+fill="none"
+stroke="currentColor"
+viewBox="0 0 24 24">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -53,7 +56,7 @@
       </div>
 
       <!-- 底部装饰线 -->
-      <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-amber-500 via-orange-500 to-orange-600 opacity-80"></div>
+      <div class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-amber-500 via-orange-500 to-orange-600 opacity-80"/>
     </div>
   </Transition>
 </template>

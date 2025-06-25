@@ -19,7 +19,7 @@
           <h2 class="text-2xl font-bold text-gray-900 mb-12 text-center animate-on-scroll">
             技术架构
           </h2>
-          
+
           <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <TechCard
               v-for="tech in techStack"
@@ -43,7 +43,7 @@
           <h2 class="text-2xl font-bold text-gray-900 mb-12 text-center animate-on-scroll">
             开发环境
           </h2>
-          
+
           <div class="card-apple p-8 animate-on-scroll">
             <div class="space-y-8">
               <!-- 环境要求 -->
@@ -103,7 +103,7 @@ dart setup.dart android</code></pre>
           <h2 class="text-2xl font-bold text-gray-900 mb-12 text-center animate-on-scroll">
             核心模块
           </h2>
-          
+
           <div class="space-y-8">
             <APISection
               v-for="module in apiModules"
@@ -123,7 +123,7 @@ dart setup.dart android</code></pre>
           <h2 class="text-2xl font-bold text-gray-900 mb-12 text-center animate-on-scroll">
             贡献指南
           </h2>
-          
+
           <div class="card-apple p-8 animate-on-scroll">
             <div class="space-y-6">
               <div>

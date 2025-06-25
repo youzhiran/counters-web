@@ -20,7 +20,7 @@
             </NuxtLink>
           </div>
         </div>
-        
+
         <!-- 应用截图 -->
         <div class="mt-16 animate-on-scroll">
           <div class="relative max-w-4xl mx-auto">
@@ -49,7 +49,7 @@
             专为桌游爱好者设计，提供完整的计分解决方案
           </p>
         </div>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <FeatureCard
             v-for="feature in coreFeatures"
@@ -74,7 +74,7 @@
             从经典扑克到现代桌游，满足不同场景的计分需求
           </p>
         </div>
-        
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <GameTypeCard
             v-for="game in gameTypes"
@@ -124,8 +124,14 @@
             class="inline-flex items-center px-8 py-4 bg-white text-primary-600 font-semibold rounded-apple-lg hover:bg-gray-50 transition-colors duration-200 shadow-apple-lg"
           >
             免费下载
-            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            <svg class="ml-2 w-5 h-5"
+fill="none"
+stroke="currentColor"
+viewBox="0 0 24 24">
+              <path stroke-linecap="round"
+stroke-linejoin="round"
+stroke-width="2"
+d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
           </NuxtLink>
         </div>

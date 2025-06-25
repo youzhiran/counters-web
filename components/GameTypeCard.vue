@@ -11,7 +11,7 @@
         {{ description }}
       </p>
     </div>
-    
+
     <div class="space-y-2">
       <div
         v-for="feature in features"

@@ -13,13 +13,13 @@
         </p>
       </div>
     </div>
-    
+
     <div class="mb-4">
       <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-100 text-primary-800">
         {{ version }}
       </span>
     </div>
-    
+
     <div class="space-y-2">
       <div
         v-for="feature in features"
