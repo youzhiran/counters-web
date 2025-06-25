@@ -16,14 +16,7 @@
     <section class="py-20 bg-white">
       <div class="container-apple">
         <div class="max-w-4xl mx-auto">
-          <div class="space-y-12">
-            <VersionCard
-              v-for="version in versions"
-              :key="version.version"
-              :version="version"
-              class="animate-on-scroll"
-            />
-          </div>
+          <ChangelogLoader :fallback-versions="fallbackVersions" />
         </div>
       </div>
     </section>
@@ -91,8 +84,22 @@ useSeoMeta({
   keywords: 'Counters更新日志,版本历史,新功能,bug修复,功能改进'
 })
 
-// 版本历史数据
-const versions = [
+// 最小化的备用版本数据（仅在静态文件也无法加载时使用）
+const fallbackVersions = [
+  {
+    version: 'v0.10.8-beta',
+    date: '2025年6月',
+    type: 'beta',
+    features: [
+      '新增更多游戏模板支持',
+      '改进联机稳定性'
+    ],
+    improvements: [
+      '优化用户界面响应速度',
+      '修复已知问题'
+    ],
+    fixes: []
+  },
   {
     version: 'v0.10.7-rc3',
     date: '2025年6月',
@@ -106,66 +113,6 @@ const versions = [
       '优化了用户界面和交互体验'
     ],
     fixes: []
-  },
-  {
-    version: 'v0.10.5-rc2',
-    date: '2025年6月',
-    type: 'release',
-    features: [],
-    improvements: [
-      '修复了一些 UI 和联机问题',
-      '提升了应用稳定性'
-    ],
-    fixes: []
-  },
-  {
-    version: 'v0.10.4-rc1',
-    date: '2025年6月',
-    type: 'release',
-    features: [
-      '新增麻将模板，支持显示为 2 位小数计分',
-      '新增点击计数器模板，点击单元格即可快速+1',
-      '新增字体选择功能',
-      '新增关于应用页面&软件许可',
-      '新增测试版联机功能，支持查找局域网游戏',
-      '测试版桌面模式，支持自适应横竖屏',
-      '计分历史页面改版，可自适应 UI',
-      '全局支持走势图，数据点可显示多个重合点数据',
-      '支持游戏中查看模板设置',
-      '全新设计的局域网联机状态',
-      '全新设计的消息系统'
-    ],
-    improvements: [
-      '程序性能优化，页面切换加入动画',
-      '设置页面调整，开放「桌面模式适配」和「通信测试&日志」选项',
-      '修复联机初次同步问题',
-      '其他 UI 改进与修复',
-      '更新了 flutter 与其他依赖版本'
-    ],
-    fixes: []
-  },
-  {
-    version: 'v0.9.14-rc1',
-    date: '2025年4月',
-    type: 'release',
-    features: [
-      '全新设计的计分流程及玩家管理',
-      '优化搜索玩家界面，玩家头像可显示emoji',
-      '优化中文字体显示效果',
-      '设置&数据库重置功能',
-      '数据迁移功能（仅Windows）',
-      '斗地主计分模板，支持记录火箭、炸弹、春天等特殊牌型及倍率'
-    ],
-    improvements: [
-      '使用 Riverpod 管理状态',
-      '使用 sqlite 代替 hive',
-      '初步程序日志系统',
-      '其他 UI 改进'
-    ],
-    fixes: [
-      '修复了多个已知问题',
-      '提升了应用稳定性'
-    ]
   }
 ]
 

@@ -14,7 +14,8 @@
     "lint:fix": "eslint . --fix",
     "type-check": "nuxt typecheck",
     "generate-privacy-version": "node scripts/generate-privacy-version.js",
-    "prebuild": "npm run generate-privacy-version"
+    "generate-fallback-versions": "node scripts/generate-fallback-versions.js",
+    "prebuild": "npm run generate-privacy-version && npm run generate-fallback-versions"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",

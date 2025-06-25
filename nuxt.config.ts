@@ -82,6 +82,9 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
+    // 服务端环境变量
+    githubToken: process.env.GITHUB_TOKEN,
+
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://counters.devyi.com',
       githubUrl: 'https://github.com/youzhiran/counters',

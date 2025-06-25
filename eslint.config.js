@@ -95,7 +95,8 @@ export default [
         defineNuxtConfig: 'readonly',
         defineEventHandler: 'readonly',
         useRuntimeConfig: 'readonly',
-        setHeader: 'readonly'
+        setHeader: 'readonly',
+        $fetch: 'readonly'
       }
     },
     plugins: {
