@@ -42,10 +42,10 @@
     <section class="py-20 bg-white">
       <div class="container-apple">
         <div class="text-center mb-16 animate-on-scroll">
-          <h2 class="text-responsive-lg font-bold text-gray-900 mb-4">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             强大的功能特性
           </h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
             专为桌游爱好者设计，提供完整的计分解决方案
           </p>
         </div>
@@ -67,10 +67,10 @@
     <section class="py-20 bg-gray-50">
       <div class="container-apple">
         <div class="text-center mb-16 animate-on-scroll">
-          <h2 class="text-responsive-lg font-bold text-gray-900 mb-4">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             支持多种游戏类型
           </h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
             从经典扑克到现代桌游，满足不同场景的计分需求
           </p>
         </div>
@@ -113,10 +113,10 @@
     <section class="py-20 bg-primary-600">
       <div class="container-apple text-center">
         <div class="animate-on-scroll">
-          <h2 class="text-responsive-lg font-bold text-white mb-4">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             准备开始你的桌游之旅？
           </h2>
-          <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+          <p class="text-lg sm:text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
             立即下载 Counters，体验专业的桌游计分功能
           </p>
           <NuxtLink

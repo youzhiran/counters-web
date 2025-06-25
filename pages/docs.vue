@@ -3,10 +3,10 @@
     <!-- 页面头部 -->
     <section class="gradient-bg py-16">
       <div class="container-apple text-center">
-        <h1 class="text-responsive-lg font-bold text-gray-900 mb-4 animate-on-scroll">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 animate-on-scroll">
           技术文档
         </h1>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto animate-on-scroll">
+        <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto animate-on-scroll">
           深入了解 Counters 的技术架构和开发细节
         </p>
       </div>

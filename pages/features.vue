@@ -3,10 +3,10 @@
     <!-- 页面头部 -->
     <section class="gradient-bg py-16">
       <div class="container-apple text-center">
-        <h1 class="text-responsive-lg font-bold text-gray-900 mb-4 animate-on-scroll">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 animate-on-scroll">
           功能特性
         </h1>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto animate-on-scroll">
+        <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto animate-on-scroll">
           探索 Counters 的强大功能，为您的桌游体验提供完整解决方案
         </p>
       </div>
@@ -192,10 +192,10 @@
     <section class="py-20 bg-primary-600">
       <div class="container-apple text-center">
         <div class="animate-on-scroll">
-          <h2 class="text-responsive-md font-bold text-white mb-4">
+          <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-4">
             体验这些强大功能
           </h2>
-          <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+          <p class="text-lg sm:text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
             立即下载 Counters，享受专业的桌游计分体验
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">

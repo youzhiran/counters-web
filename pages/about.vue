@@ -3,10 +3,10 @@
     <!-- 页面头部 -->
     <section class="gradient-bg py-16">
       <div class="container-apple text-center">
-        <h1 class="text-responsive-lg font-bold text-gray-900 mb-4 animate-on-scroll">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 animate-on-scroll">
           关于我们
         </h1>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto animate-on-scroll">
+        <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto animate-on-scroll">
           了解 Counters 的故事和我们的使命
         </p>
       </div>
@@ -169,10 +169,10 @@
     <section class="py-20 bg-primary-600">
       <div class="container-apple text-center">
         <div class="animate-on-scroll">
-          <h2 class="text-2xl font-bold text-white mb-4">
+          <h2 class="text-xl sm:text-2xl font-bold text-white mb-4">
             联系我们
           </h2>
-          <p class="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+          <p class="text-lg sm:text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
             有任何问题或建议？我们很乐意听到您的声音
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">

@@ -3,10 +3,10 @@
     <!-- 页面头部 -->
     <section class="gradient-bg py-16">
       <div class="container-apple text-center">
-        <h1 class="text-responsive-lg font-bold text-gray-900 mb-4 animate-on-scroll">
+        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 animate-on-scroll">
           隐私政策
         </h1>
-        <p class="text-xl text-gray-600 max-w-2xl mx-auto animate-on-scroll">
+        <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto animate-on-scroll">
           我们重视您的隐私，了解我们如何收集、使用和保护您的个人信息
         </p>
       </div>
