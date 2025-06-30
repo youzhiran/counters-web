@@ -39,7 +39,7 @@
               target="_blank"
               rel="noopener noreferrer"
               class="text-gray-400 hover:text-green-700 transition-colors"
-              title="加速下载"
+              :title="`加速下载：${getDeviceTypeDescription()}`"
           >
             <svg class="w-4 h-4"
                  fill="none"
@@ -106,7 +106,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 class="text-gray-400 hover:text-green-600 transition-colors"
-                title="加速下载：安卓64位"
+                :title="`加速下载：${getDeviceTypeDescription()}`"
             >
               <svg class="w-4 h-4"
                    fill="none"
@@ -197,6 +197,8 @@
 </template>
 
 <script setup lang="ts">
+import { useBreakpoints } from '@vueuse/core'
+
 interface Version {
   version: string
   date: string
@@ -218,6 +220,15 @@ defineProps<Props>()
 // 导入 Nuxt 运行时配置
 const config = useRuntimeConfig()
 
+// 使用 VueUse 检测用户设备类型
+const breakpoints = useBreakpoints({
+  mobile: 0,
+  tablet: 768,
+  desktop: 1024
+})
+
+const isMobile = breakpoints.smaller('tablet')
+
 /**
  * 格式化日期显示
  * @param date 日期字符串，如 "2025年6月24日"
@@ -229,7 +240,78 @@ const formatDateWithDay = (date: string): string => {
 }
 
 /**
- * 根据版本号生成下载链接
+ * 检测用户设备类型并返回对应的文件后缀
+ * @returns 文件后缀字符串
+ */
+const getDeviceFileSuffix = (): string => {
+  // 在客户端检测设备类型
+  if (import.meta.client) {
+    const userAgent = navigator.userAgent.toLowerCase()
+
+    // 检测安卓设备
+    if (userAgent.includes('android')) {
+      return 'android-arm64-v8a.apk'
+    }
+
+    // 检测 Windows 设备
+    if (userAgent.includes('windows')) {
+      return 'windows-x64.zip'
+    }
+
+    // 检测 macOS 设备
+    if (userAgent.includes('mac')) {
+      return 'windows-x64.zip' // 暂时使用 Windows 版本，因为 macOS 版本还在适配中
+    }
+
+    // 检测 Linux 设备
+    if (userAgent.includes('linux')) {
+      return 'windows-x64.zip' // 暂时使用 Windows 版本
+    }
+
+    // 移动设备优先选择安卓版本
+    if (isMobile.value) {
+      return 'android-arm64-v8a.apk'
+    }
+  }
+
+  // 默认返回安卓版本（服务端渲染时的默认值）
+  return 'android-arm64-v8a.apk'
+}
+
+/**
+ * 获取当前检测到的设备类型描述
+ * @returns 设备类型描述字符串
+ */
+const getDeviceTypeDescription = (): string => {
+  if (import.meta.client) {
+    const userAgent = navigator.userAgent.toLowerCase()
+
+    if (userAgent.includes('android')) {
+      return '安卓64位'
+    }
+
+    if (userAgent.includes('windows')) {
+      return 'Windows64位'
+    }
+
+    if (userAgent.includes('mac')) {
+      return 'Windows64位' // 暂时显示 Windows，因为 macOS 版本还在适配中
+    }
+
+    if (userAgent.includes('linux')) {
+      return 'Windows64位' // 暂时显示 Windows
+    }
+
+    if (isMobile.value) {
+      return '安卓64位'
+    }
+  }
+
+  return '安卓64位' // 默认描述
+}
+
+/**
+ * 根据版本号和设备类型生成下载链接
  * @param version 版本号，如 "v0.10.7-rc3"
  * @returns 下载链接或空字符串
  */
@@ -242,8 +324,10 @@ const getDownloadUrl = (version: string): string => {
   // 移除版本号前的 "v" 前缀用于文件名
   const versionWithoutV = version.startsWith('v') ? version.slice(1) : version
 
-  // 默认下载 Android APK 文件
-  return `${releasesUrl}/download/${version}/counters-${versionWithoutV}-android-arm64-v8a.apk`
+  // 根据设备类型选择对应的文件
+  const fileSuffix = getDeviceFileSuffix()
+
+  return `${releasesUrl}/download/${version}/counters-${versionWithoutV}-${fileSuffix}`
 }
 
 /**

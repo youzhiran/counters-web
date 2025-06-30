@@ -30,6 +30,7 @@ export default [
         clearInterval: 'readonly',
         IntersectionObserver: 'readonly',
         HTMLElement: 'readonly',
+        navigator: 'readonly',
         NodeJS: 'readonly',
         // Node.js 环境
         process: 'readonly',
