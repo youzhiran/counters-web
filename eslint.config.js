@@ -41,6 +41,7 @@ export default [
         useHead: 'readonly',
         useSeoMeta: 'readonly',
         useNuxtApp: 'readonly',
+        useRuntimeConfig: 'readonly',
         ref: 'readonly',
         reactive: 'readonly',
         computed: 'readonly',
