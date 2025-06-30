@@ -41,6 +41,21 @@ export default defineNuxtConfig({
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }
       ],
       script: [
+        // Google Analytics
+        {
+          src: 'https://www.googletagmanager.com/gtag/js?id=G-GM1PW1LS2G',
+          async: true
+        },
+        {
+          innerHTML: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-GM1PW1LS2G');
+          `,
+          type: 'text/javascript'
+        },
+        // Microsoft Clarity
         {
           innerHTML: `
             (function(c,l,a,r,i,t,y){
