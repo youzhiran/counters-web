@@ -132,7 +132,7 @@ const navigation = [
   { name: '功能特性', href: '/features' },
   { name: '下载', href: '/download' },
   { name: '使用指南', href: '/guide' },
-  { name: '技术文档', href: '/docs' },
+  // { name: '技术文档', href: '/docs' },
   { name: '更新日志', href: '/changelog' },
   { name: '关于我们', href: '/about' },
   { name: '联系反馈', href: '/contact' }

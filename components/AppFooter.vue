@@ -59,11 +59,11 @@
         <div>
           <h3 class="text-lg font-semibold mb-4">支持</h3>
           <ul class="space-y-2">
-            <li>
-              <NuxtLink to="/docs" class="text-gray-400 hover:text-white transition-colors">
-                技术文档
-              </NuxtLink>
-            </li>
+<!--            <li>-->
+<!--              <NuxtLink to="/docs" class="text-gray-400 hover:text-white transition-colors">-->
+<!--                技术文档-->
+<!--              </NuxtLink>-->
+<!--            </li>-->
             <li>
               <NuxtLink to="/contact" class="text-gray-400 hover:text-white transition-colors">
                 联系反馈

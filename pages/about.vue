@@ -156,9 +156,9 @@
                 </svg>
                 查看源码
               </a>
-              <NuxtLink to="/docs" class="btn-secondary">
-                技术文档
-              </NuxtLink>
+<!--              <NuxtLink to="/docs" class="btn-secondary">-->
+<!--                技术文档-->
+<!--              </NuxtLink>-->
             </div>
           </div>
         </div>

@@ -211,14 +211,16 @@
             还有问题？
           </h2>
           <p class="text-lg sm:text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            查看技术文档或联系我们获取更多帮助
+            查看 DeepWiki 或联系我们获取更多帮助
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <NuxtLink
-                to="/docs"
+                to="https://deepwiki.com/youzhiran/counters"
+                target="_blank"
+                external
                 class="btn-primary bg-white text-primary-600 hover:bg-gray-50"
             >
-              技术文档
+              DeepWiki
             </NuxtLink>
             <NuxtLink
                 to="/contact"
