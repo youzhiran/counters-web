@@ -57,12 +57,12 @@
             <div class="text-center animate-on-scroll">
               <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg class="w-8 h-8 text-green-600"
-fill="none"
-stroke="currentColor"
-viewBox="0 0 24 24">
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24">
                   <path stroke-linecap="round"
-stroke-linejoin="round"
-stroke-width="2"
+                        stroke-linejoin="round"
+                        stroke-width="2"
                         d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
               </div>
@@ -73,33 +73,33 @@ stroke-width="2"
             <div class="text-center animate-on-scroll">
               <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg class="w-8 h-8 text-yellow-600"
-fill="none"
-stroke="currentColor"
-viewBox="0 0 24 24">
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24">
                   <path stroke-linecap="round"
-stroke-linejoin="round"
-stroke-width="2"
+                        stroke-linejoin="round"
+                        stroke-width="2"
                         d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
               </div>
               <h3 class="text-lg font-semibold text-gray-900 mb-2">测试版 (beta)</h3>
-              <p class="text-gray-600 text-sm">新功能预览，可能存在问题</p>
+              <p class="text-gray-600 text-sm">新功能尝鲜，可能存在问题</p>
             </div>
 
             <div class="text-center animate-on-scroll">
               <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg class="w-8 h-8 text-red-600"
-fill="none"
-stroke="currentColor"
-viewBox="0 0 24 24">
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24">
                   <path stroke-linecap="round"
-stroke-linejoin="round"
-stroke-width="2"
+                        stroke-linejoin="round"
+                        stroke-width="2"
                         d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/>
                 </svg>
               </div>
               <h3 class="text-lg font-semibold text-gray-900 mb-2">开发版 (alpha)</h3>
-              <p class="text-gray-600 text-sm">最新功能，仅供测试</p>
+              <p class="text-gray-600 text-sm">包含尚未完全测试的最新功能，仅供预览</p>
             </div>
           </div>
 
