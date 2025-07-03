@@ -304,6 +304,189 @@ async function generateFallbackVersions() {
   }
 }
 
+/**
+ * 获取最新正式版本信息
+ */
+function getLatestReleaseVersion(versions) {
+  // 查找最新的正式版本（非 beta/alpha）
+  const releaseVersions = versions.filter(v => v.type === 'release');
+  return releaseVersions.length > 0 ? releaseVersions[0] : versions[0];
+}
+
+/**
+ * 生成下载页面数据
+ */
+async function generateDownloadData() {
+  console.log('🚀 开始生成下载页面数据...');
+
+  try {
+    // 从 GitHub API 获取数据
+    console.log('📡 正在从 GitHub API 获取 releases 数据...');
+    const releases = await fetchGitHubReleases();
+    console.log(`✅ 成功获取 ${releases.length} 个 releases`);
+
+    // 过滤并转换数据
+    const versions = releases
+      .filter(release => !release.draft)
+      .map(convertReleaseToVersion)
+      .sort((a, b) => compareVersions(b.version, a.version)); // 降序排列
+
+    console.log(`📋 处理后得到 ${versions.length} 个有效版本`);
+
+    // 获取最新正式版本
+    const latestRelease = getLatestReleaseVersion(versions);
+    console.log(`🎯 最新正式版本: ${latestRelease.version}`);
+
+    // 生成平台下载信息
+    const platforms = [
+      {
+        name: 'Android',
+        icon: '🤖',
+        description: '推荐平台，功能完整',
+        version: 'Android 5.0+',
+        size: '约11MB',
+        downloadUrl: `https://github.com/youzhiran/counters/releases/download/${latestRelease.version}/counters-${latestRelease.version.replace(/^v/, '')}-android-arm64-v8a.apk`,
+        recommended: true,
+        status: 'recommended'
+      },
+      {
+        name: 'Windows',
+        icon: '💻',
+        description: '桌面端体验，功能完整',
+        version: 'Windows 10+',
+        size: '约13MB',
+        downloadUrl: `https://github.com/youzhiran/counters/releases/download/${latestRelease.version}/counters-${latestRelease.version.replace(/^v/, '')}-windows-x64.zip`,
+        recommended: true,
+        status: 'recommended'
+      },
+      {
+        name: 'macOS',
+        icon: '🍎',
+        description: '正在适配中',
+        version: '~',
+        size: '~',
+        downloadUrl: `https://github.com/youzhiran/counters/releases/latest/download/counters-${latestRelease.version.replace(/^v/, '')}-macos.dmg`,
+        recommended: false,
+        status: 'pending'
+      },
+      {
+        name: 'Linux',
+        icon: '🐧',
+        description: '正在适配中',
+        version: '~',
+        size: '~',
+        downloadUrl: `https://github.com/youzhiran/counters/releases/latest/download/counters-${latestRelease.version.replace(/^v/, '')}-linux-amd64.tar.gz`,
+        recommended: false,
+        status: 'pending'
+      }
+    ];
+
+    // 生成输出数据
+    const outputData = {
+      latestRelease,
+      platforms,
+      generatedAt: new Date().toISOString(),
+      source: 'github-api'
+    };
+
+    // 确保输出目录存在
+    const outputDir = path.join(__dirname, '../public/api');
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+
+    // 写入文件
+    const outputPath = path.join(outputDir, 'download-data.json');
+    fs.writeFileSync(outputPath, JSON.stringify(outputData, null, 2), 'utf8');
+
+    console.log(`✅ 下载页面数据已生成: ${outputPath}`);
+    console.log(`📊 最新正式版本: ${latestRelease.version} (${latestRelease.date})`);
+
+  } catch (error) {
+    console.error('❌ 从 GitHub API 获取数据失败:', error.message);
+    console.log('🔄 使用降级方案生成基础下载数据...');
+
+    // 降级方案：生成基础的下载数据
+    const fallbackLatestRelease = {
+      version: 'v0.10.7-rc3',
+      date: '2025年6月19日',
+      type: 'release',
+      features: [
+        '全新设计的局域网联机状态，信息更详细，支持重连、管理等功能',
+        '全新设计的消息系统，支持消息堆叠，界面更美观'
+      ],
+      improvements: [
+        '修复了联网、消息和动画的一些问题',
+        '优化了用户界面和交互体验'
+      ],
+      fixes: []
+    };
+
+    const fallbackPlatforms = [
+      {
+        name: 'Android',
+        icon: '🤖',
+        description: '推荐平台，功能完整',
+        version: 'Android 5.0+',
+        size: '约11MB',
+        downloadUrl: 'https://github.com/youzhiran/counters/releases/download/v0.10.7-rc3/counters-0.10.7-rc3-android-arm64-v8a.apk',
+        recommended: true,
+        status: 'recommended'
+      },
+      {
+        name: 'Windows',
+        icon: '💻',
+        description: '桌面端体验，功能完整',
+        version: 'Windows 10+',
+        size: '约13MB',
+        downloadUrl: 'https://github.com/youzhiran/counters/releases/download/v0.10.7-rc3/counters-0.10.7-rc3-windows-x64.zip',
+        recommended: true,
+        status: 'recommended'
+      },
+      {
+        name: 'macOS',
+        icon: '🍎',
+        description: '正在适配中',
+        version: '~',
+        size: '~',
+        downloadUrl: 'https://github.com/youzhiran/counters/releases/latest/download/counters-0.10.7-rc3-macos.dmg',
+        recommended: false,
+        status: 'pending'
+      },
+      {
+        name: 'Linux',
+        icon: '🐧',
+        description: '正在适配中',
+        version: '~',
+        size: '~',
+        downloadUrl: 'https://github.com/youzhiran/counters/releases/latest/download/counters-0.10.7-rc3-linux-amd64.tar.gz',
+        recommended: false,
+        status: 'pending'
+      }
+    ];
+
+    const fallbackData = {
+      latestRelease: fallbackLatestRelease,
+      platforms: fallbackPlatforms,
+      generatedAt: new Date().toISOString(),
+      source: 'fallback',
+      error: error.message
+    };
+
+    // 确保输出目录存在
+    const outputDir = path.join(__dirname, '../public/api');
+    if (!fs.existsSync(outputDir)) {
+      fs.mkdirSync(outputDir, { recursive: true });
+    }
+
+    // 写入降级数据
+    const outputPath = path.join(outputDir, 'download-data.json');
+    fs.writeFileSync(outputPath, JSON.stringify(fallbackData, null, 2), 'utf8');
+
+    console.log(`⚠️  已生成降级下载数据: ${outputPath}`);
+  }
+}
+
 // 如果直接运行此脚本
 if (require.main === module) {
   generateFallbackVersions()
@@ -317,4 +500,4 @@ if (require.main === module) {
     });
 }
 
-module.exports = { generateFallbackVersions, compareVersions };
+module.exports = { generateFallbackVersions, generateDownloadData, compareVersions };

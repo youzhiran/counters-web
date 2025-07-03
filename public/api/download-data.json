@@ -1,0 +1,73 @@
+{
+  "latestRelease": {
+    "version": "v0.10.11-rc4",
+    "date": "2025年7月3日",
+    "type": "release",
+    "features": [
+      "新增数据备份与恢复功能，支持导入、导出应用数据",
+      "新增管理备份功能，数据导入前可自动备份数据，支持还原和导出备份",
+      "新增局域网端口自定义功能",
+      "新增启动时检查更新选项，支持不检查、正式版、测试版选项",
+      "新增隐私政策检测更新的特性"
+    ],
+    "improvements": [
+      "使用Microsoft Clarity 替换友盟 SDK",
+      "增加启动主机时检测并提示端口占用的功能",
+      "升级Flutter 3.32.5，更新依赖",
+      "完善端口占用提示，支持检测广播端口",
+      "删除未使用玩家可提示数量提示",
+      "删除麻将页面错误的高亮效果",
+      "退出计分确认",
+      "统一桌面模式判断",
+      "其他文本和 UI 改进"
+    ],
+    "fixes": [],
+    "url": "https://github.com/youzhiran/counters/releases/tag/v0.10.11-rc4",
+    "author": "github-actions[bot]",
+    "downloadCount": 0
+  },
+  "platforms": [
+    {
+      "name": "Android",
+      "icon": "🤖",
+      "description": "推荐平台，功能完整",
+      "version": "Android 5.0+",
+      "size": "约11MB",
+      "downloadUrl": "https://github.com/youzhiran/counters/releases/download/v0.10.11-rc4/counters-0.10.11-rc4-android-arm64-v8a.apk",
+      "recommended": true,
+      "status": "recommended"
+    },
+    {
+      "name": "Windows",
+      "icon": "💻",
+      "description": "桌面端体验，功能完整",
+      "version": "Windows 10+",
+      "size": "约13MB",
+      "downloadUrl": "https://github.com/youzhiran/counters/releases/download/v0.10.11-rc4/counters-0.10.11-rc4-windows-x64.zip",
+      "recommended": true,
+      "status": "recommended"
+    },
+    {
+      "name": "macOS",
+      "icon": "🍎",
+      "description": "正在适配中",
+      "version": "~",
+      "size": "~",
+      "downloadUrl": "https://github.com/youzhiran/counters/releases/latest/download/counters-0.10.11-rc4-macos.dmg",
+      "recommended": false,
+      "status": "pending"
+    },
+    {
+      "name": "Linux",
+      "icon": "🐧",
+      "description": "正在适配中",
+      "version": "~",
+      "size": "~",
+      "downloadUrl": "https://github.com/youzhiran/counters/releases/latest/download/counters-0.10.11-rc4-linux-amd64.tar.gz",
+      "recommended": false,
+      "status": "pending"
+    }
+  ],
+  "generatedAt": "2025-07-03T03:41:59.661Z",
+  "source": "github-api"
+}

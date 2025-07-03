@@ -20,12 +20,39 @@
               class="inline-flex items-center px-4 py-2 bg-primary-100 text-primary-800 rounded-full text-sm font-medium mb-4">
             最新版本
           </div>
-          <h2 class="text-3xl font-bold text-gray-900 mb-2">
-            v0.10.7-rc3
-          </h2>
-          <p class="text-gray-600">
-            发布时间：2025年6月
-          </p>
+
+          <!-- 加载状态 -->
+          <div v-if="loading" class="space-y-2">
+            <div class="h-8 bg-gray-200 rounded w-48 mx-auto animate-pulse"></div>
+            <div class="h-4 bg-gray-200 rounded w-32 mx-auto animate-pulse"></div>
+          </div>
+
+          <!-- 版本信息 -->
+          <div v-else-if="latestRelease" class="space-y-2">
+            <h2 class="text-3xl font-bold text-gray-900">
+              {{ latestRelease.version }}
+            </h2>
+            <p class="text-gray-600">
+              发布时间：{{ latestRelease.date }}
+            </p>
+            <!-- 显示回退数据提示 -->
+            <div v-if="isShowingFallback" class="text-xs text-yellow-600 mt-2">
+              ⚠️ 当前显示的是备用数据
+            </div>
+          </div>
+
+          <!-- 错误状态 -->
+          <div v-else class="space-y-2">
+            <h2 class="text-3xl font-bold text-gray-900">
+              v0.10.7-rc3
+            </h2>
+            <p class="text-gray-600">
+              发布时间：2025年6月19日
+            </p>
+            <div class="text-xs text-red-600 mt-2">
+              ⚠️ 无法获取最新版本信息
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -35,7 +62,30 @@
       <div class="container-apple">
         <!-- 增加上边距为推荐标签提供空间 -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+          <!-- 加载状态 -->
+          <div v-if="loading" class="col-span-full">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div v-for="i in 4" :key="i" class="card-apple p-6">
+                <div class="text-center space-y-4">
+                  <div class="w-16 h-16 bg-gray-200 rounded mx-auto animate-pulse"></div>
+                  <div class="h-6 bg-gray-200 rounded w-20 mx-auto animate-pulse"></div>
+                  <div class="h-4 bg-gray-200 rounded w-32 mx-auto animate-pulse"></div>
+                  <div class="space-y-2">
+                    <div class="h-3 bg-gray-200 rounded w-24 mx-auto animate-pulse"></div>
+                    <div class="h-3 bg-gray-200 rounded w-16 mx-auto animate-pulse"></div>
+                  </div>
+                  <div class="space-y-2">
+                    <div class="h-10 bg-gray-200 rounded animate-pulse"></div>
+                    <div class="h-10 bg-gray-200 rounded animate-pulse"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 下载卡片 -->
           <DownloadCard
+              v-else
               v-for="platform in platforms"
               :key="platform.name"
               :platform="platform"
@@ -105,21 +155,90 @@
 
           <!-- 更新内容 -->
           <div class="bg-gray-50 rounded-apple-lg p-8 animate-on-scroll">
-            <h3 class="text-xl font-semibold text-gray-900 mb-6">v0.10.7-rc3 更新内容</h3>
-            <div class="space-y-4">
-              <div>
-                <h4 class="font-medium text-gray-900 mb-2">✨ 新增特性</h4>
-                <ul class="space-y-1 text-gray-600 ml-4">
-                  <li>• 全新设计的局域网联机状态，信息更详细，支持重连、管理等功能</li>
-                  <li>• 全新设计的消息系统，支持消息堆叠，界面更美观</li>
-                </ul>
+            <!-- 加载状态 -->
+            <div v-if="loading" class="space-y-4">
+              <div class="h-6 bg-gray-200 rounded w-48 animate-pulse"></div>
+              <div class="space-y-2">
+                <div class="h-4 bg-gray-200 rounded w-24 animate-pulse"></div>
+                <div class="h-3 bg-gray-200 rounded w-full animate-pulse"></div>
+                <div class="h-3 bg-gray-200 rounded w-3/4 animate-pulse"></div>
               </div>
-              <div>
-                <h4 class="font-medium text-gray-900 mb-2">🔧 其他改进</h4>
-                <ul class="space-y-1 text-gray-600 ml-4">
-                  <li>• 修复了联网、消息和动画的一些问题</li>
-                  <li>• 优化了用户界面和交互体验</li>
-                </ul>
+            </div>
+
+            <!-- 更新内容 -->
+            <div v-else-if="latestRelease">
+              <h3 class="text-xl font-semibold text-gray-900 mb-6">
+                {{ latestRelease.version }} 更新内容
+              </h3>
+
+              <!-- 检查是否有更新内容 -->
+              <div v-if="latestRelease.features.length > 0 || latestRelease.improvements.length > 0 || latestRelease.fixes.length > 0" class="space-y-4">
+                <!-- 新增特性 -->
+                <div v-if="latestRelease.features.length > 0">
+                  <h4 class="font-medium text-gray-900 mb-2">✨ 新增特性</h4>
+                  <ul class="space-y-1 text-gray-600 ml-4">
+                    <li v-for="feature in latestRelease.features" :key="feature">
+                      • {{ feature }}
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- 功能改进 -->
+                <div v-if="latestRelease.improvements.length > 0">
+                  <h4 class="font-medium text-gray-900 mb-2">🔧 功能改进</h4>
+                  <ul class="space-y-1 text-gray-600 ml-4">
+                    <li v-for="improvement in latestRelease.improvements" :key="improvement">
+                      • {{ improvement }}
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- 问题修复 -->
+                <div v-if="latestRelease.fixes.length > 0">
+                  <h4 class="font-medium text-gray-900 mb-2">🐛 问题修复</h4>
+                  <ul class="space-y-1 text-gray-600 ml-4">
+                    <li v-for="fix in latestRelease.fixes" :key="fix">
+                      • {{ fix }}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- 没有更新内容时的提示 -->
+              <div v-else class="text-center py-8">
+                <div class="text-gray-500 mb-4">
+                  <svg class="w-12 h-12 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                  </svg>
+                </div>
+                <p class="text-gray-600">
+                  详细更新内容请查看
+                  <a v-if="latestRelease.url" :href="latestRelease.url" target="_blank" rel="noopener noreferrer" class="text-primary-600 hover:text-primary-700 underline">
+                    GitHub Release 页面
+                  </a>
+                  <span v-else>GitHub Release 页面</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- 错误状态回退内容 -->
+            <div v-else class="space-y-4">
+              <h3 class="text-xl font-semibold text-gray-900 mb-6">v0.10.7-rc3 更新内容</h3>
+              <div class="space-y-4">
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-2">✨ 新增特性</h4>
+                  <ul class="space-y-1 text-gray-600 ml-4">
+                    <li>• 全新设计的局域网联机状态，信息更详细，支持重连、管理等功能</li>
+                    <li>• 全新设计的消息系统，支持消息堆叠，界面更美观</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900 mb-2">🔧 其他改进</h4>
+                  <ul class="space-y-1 text-gray-600 ml-4">
+                    <li>• 修复了联网、消息和动画的一些问题</li>
+                    <li>• 优化了用户界面和交互体验</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -175,69 +294,33 @@
 </template>
 
 <script setup lang="ts">
-// 导入 Platform 类型
-interface Platform {
-  name: string
-  icon: string
-  description: string
-  version: string
-  size: string
-  downloadUrl: string
-  recommended: boolean
-  status: 'recommended' | 'pending' | 'available'
-}
+// 使用下载数据 composable
+const { loading, error, getLatestRelease, getPlatforms, isShowingFallback, loadDownloadData } = useDownloadData()
 
-// SEO 配置
-useSeoMeta({
-  title: '下载 - Counters 桌游计分器',
-  description: '下载 Counters 桌游计分器，支持 Android、Windows、macOS、Linux 多平台。最新版本 v0.10.7-rc3，免费开源。',
-  keywords: 'Counters下载,桌游计分器下载,Android,Windows,macOS,Linux,多平台应用'
+// 在组件挂载时加载数据
+onMounted(() => {
+  loadDownloadData()
 })
 
-const {$config} = useNuxtApp()
+// 计算属性
+const latestRelease = getLatestRelease
+const platforms = getPlatforms
 
-// 平台下载信息
-const platforms: Platform[] = [
-  {
-    name: 'Android',
-    icon: '🤖',
-    description: '推荐平台，功能完整',
-    version: 'Android 5.0+',
-    size: '约11MB',
-    downloadUrl: `${$config.public.releasesUrl}/download/v0.10.7-rc3/counters-0.10.7-rc3-android-arm64-v8a.apk`,
-    recommended: true,
-    status: 'recommended'
-  },
-  {
-    name: 'Windows',
-    icon: '💻',
-    description: '桌面端体验，功能完整',
-    version: 'Windows 10+',
-    size: '约13MB',
-    downloadUrl: `${$config.public.releasesUrl}/download/v0.10.7-rc3/counters-0.10.7-rc3-windows-x64.zip`,
-    recommended: true,
-    status: 'recommended'
-  },
-  {
-    name: 'macOS',
-    icon: '🍎',
-    description: '正在适配中',
-    version: '~',
-    size: '~',
-    downloadUrl: `${$config.public.releasesUrl}/latest/download/counters-0.10.7-rc3-macos.dmg`,
-    recommended: false,
-    status: 'pending'
-  },
-  {
-    name: 'Linux',
-    icon: '🐧',
-    description: '正在适配中',
-    version: '~',
-    size: '~',
-    downloadUrl: `${$config.public.releasesUrl}/latest/download/counters-0.10.7-rc3-linux-amd64.tar.gz`,
-    recommended: false,
-    status: 'pending'
-  }
-]
+// SEO 配置 - 使用动态版本信息
+const seoTitle = computed(() => {
+  const version = latestRelease.value?.version || 'v0.10.7-rc3'
+  return `下载 - Counters 桌游计分器`
+})
+
+const seoDescription = computed(() => {
+  const version = latestRelease.value?.version || 'v0.10.7-rc3'
+  return `下载 Counters 桌游计分器，支持 Android、Windows、macOS、Linux 多平台。最新版本 ${version}，免费开源。`
+})
+
+useSeoMeta({
+  title: seoTitle,
+  description: seoDescription,
+  keywords: 'Counters下载,桌游计分器下载,Android,Windows,macOS,Linux,多平台应用'
+})
 
 </script>
