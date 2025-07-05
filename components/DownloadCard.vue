@@ -63,7 +63,7 @@ d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             GitHub下载
           </a>
 
-          <!-- 加速下载按钮 -->
+          <!-- 镜像下载按钮 -->
           <a
             :href="getAcceleratedDownloadUrl(platform.downloadUrl)"
             target="_blank"
@@ -79,7 +79,7 @@ stroke-linejoin="round"
 stroke-width="2"
 d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
-            加速下载
+            镜像下载
           </a>
         </template>
 
@@ -126,7 +126,7 @@ interface Props {
 
 defineProps<Props>()
 
-// 生成加速下载链接
+// 生成镜像下载链接
 const getAcceleratedDownloadUrl = (originalUrl: string): string => {
   return `https://proxy.gitwarp.com/${originalUrl}`
 }
