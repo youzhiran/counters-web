@@ -41,31 +41,8 @@ export default defineNuxtConfig({
         { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }
       ],
       script: [
-        // Google Analytics
-        {
-          src: 'https://www.googletagmanager.com/gtag/js?id=G-GM1PW1LS2G',
-          async: true
-        },
-        {
-          innerHTML: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-GM1PW1LS2G');
-          `,
-          type: 'text/javascript'
-        },
-        // Microsoft Clarity
-        {
-          innerHTML: `
-            (function(c,l,a,r,i,t,y){
-              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-            })(window, document, "clarity", "script", "s3qts1pxwm");
-          `,
-          type: 'text/javascript'
-        }
+        // 统计脚本已移至客户端插件动态加载
+        // 这样可以根据用户设置决定是否加载
       ]
     }
   },
