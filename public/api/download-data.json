@@ -24,7 +24,7 @@
     "fixes": [],
     "url": "https://github.com/youzhiran/counters/releases/tag/v0.10.11-rc4",
     "author": "github-actions[bot]",
-    "downloadCount": 0
+    "downloadCount": 14
   },
   "platforms": [
     {
@@ -68,6 +68,6 @@
       "status": "pending"
     }
   ],
-  "generatedAt": "2025-07-03T03:41:59.661Z",
+  "generatedAt": "2025-07-10T12:39:51.216Z",
   "source": "github-api"
 }

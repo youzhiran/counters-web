@@ -1,22 +1,47 @@
 {
   "versions": [
     {
-      "version": "v0.10.8-beta",
-      "date": "2025年6月24日",
-      "type": "beta",
+      "version": "v0.10.11-rc4",
+      "date": "2025年7月3日",
+      "type": "release",
       "features": [
+        "新增数据备份与恢复功能，支持导入、导出应用数据",
+        "新增管理备份功能，数据导入前可自动备份数据，支持还原和导出备份",
+        "新增局域网端口自定义功能",
         "新增启动时检查更新选项，支持不检查、正式版、测试版选项",
         "新增隐私政策检测更新的特性"
       ],
       "improvements": [
         "使用Microsoft Clarity 替换友盟 SDK",
         "增加启动主机时检测并提示端口占用的功能",
-        "升级Flutter 3.32.4，更新依赖"
+        "升级Flutter 3.32.5，更新依赖",
+        "完善端口占用提示，支持检测广播端口",
+        "删除未使用玩家可提示数量提示",
+        "删除麻将页面错误的高亮效果",
+        "退出计分确认",
+        "统一桌面模式判断",
+        "其他文本和 UI 改进"
       ],
       "fixes": [],
-      "url": "https://github.com/youzhiran/counters/releases/tag/v0.10.8-beta",
+      "url": "https://github.com/youzhiran/counters/releases/tag/v0.10.11-rc4",
       "author": "github-actions[bot]",
-      "downloadCount": 1
+      "downloadCount": 14
+    },
+    {
+      "version": "v0.10.10-alpha",
+      "date": "2025年7月2日",
+      "type": "beta",
+      "features": [
+        "新增数据备份与恢复功能，支持导入导出和还原自动备份"
+      ],
+      "improvements": [
+        "统一桌面模式判断",
+        "其他文本和 UI 改动"
+      ],
+      "fixes": [],
+      "url": "https://github.com/youzhiran/counters/releases/tag/v0.10.10-alpha",
+      "author": "github-actions[bot]",
+      "downloadCount": 2
     },
     {
       "version": "v0.10.7-rc3",
@@ -32,24 +57,7 @@
       "fixes": [],
       "url": "https://github.com/youzhiran/counters/releases/tag/v0.10.7-rc3",
       "author": "github-actions[bot]",
-      "downloadCount": 35
-    },
-    {
-      "version": "v0.10.6-beta",
-      "date": "2025年6月16日",
-      "type": "beta",
-      "features": [
-        "全新设计的局域网联机状态，信息更详细，支持重连、管理等功能",
-        "全新设计的消息系统，支持消息堆叠，界面更美观"
-      ],
-      "improvements": [
-        "局域网联机问题修复改进",
-        "其他 UI 改进与修复"
-      ],
-      "fixes": [],
-      "url": "https://github.com/youzhiran/counters/releases/tag/v0.10.6-beta",
-      "author": "github-actions[bot]",
-      "downloadCount": 4
+      "downloadCount": 59
     },
     {
       "version": "v0.10.5-rc2",
@@ -107,25 +115,6 @@
       "downloadCount": 2
     },
     {
-      "version": "v0.10.3-beta",
-      "date": "2025年6月3日",
-      "type": "beta",
-      "features": [
-        "新增字体选择功能",
-        "计分历史页面改版，可自适应 UI",
-        "设置页面调整，开放「桌面模式适配」和「通信测试&日志」选项",
-        "发现局域网游戏页面可查看/刷新当前本机 IP"
-      ],
-      "improvements": [
-        "修复联机初次同步问题",
-        "其他 UI 改进与修复"
-      ],
-      "fixes": [],
-      "url": "https://github.com/youzhiran/counters/releases/tag/v0.10.3-beta",
-      "author": "github-actions[bot]",
-      "downloadCount": 1
-    },
-    {
       "version": "v0.9.14-rc1",
       "date": "2025年4月18日",
       "type": "release",
@@ -146,7 +135,7 @@
       "fixes": [],
       "url": "https://github.com/youzhiran/counters/releases/tag/v0.9.14-rc1",
       "author": "github-actions[bot]",
-      "downloadCount": 17
+      "downloadCount": 18
     },
     {
       "version": "v0.8.16-rc2",
@@ -171,7 +160,7 @@
       "downloadCount": 2
     }
   ],
-  "generatedAt": "2025-06-25T04:24:03.369Z",
+  "generatedAt": "2025-07-10T12:38:17.485Z",
   "source": "github-api",
-  "count": 9
+  "count": 8
 }

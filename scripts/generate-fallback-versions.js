@@ -74,8 +74,15 @@ function parseReleaseBody(body) {
     return { features, improvements, fixes };
   }
 
+  // 清理可能的编码问题和特殊字符
+  const cleanBody = body
+    .replace(/\uFFFD/g, '') // 移除替换字符 (�)
+    .replace(/[\u200B-\u200D\uFEFF]/g, '') // 移除零宽字符
+    .replace(/\r\n/g, '\n') // 统一换行符
+    .replace(/\r/g, '\n');
+
   // 按行分割内容
-  const lines = body.split('\n').map(line => line.trim()).filter(line => line);
+  const lines = cleanBody.split('\n').map(line => line.trim()).filter(line => line);
 
   let currentSection = '';
 
@@ -95,7 +102,15 @@ function parseReleaseBody(body) {
     // 提取列表项
     const listMatch = line.match(/^[-*+]\s*(.+)/);
     if (listMatch) {
-      const content = listMatch[1].trim();
+      let content = listMatch[1].trim();
+
+      // 清理内容中的特殊字符和编码问题
+      content = content
+        .replace(/\uFFFD/g, '') // 移除替换字符 (�)
+        .replace(/[\u200B-\u200D\uFEFF]/g, '') // 移除零宽字符
+        .replace(/\u00A0/g, ' ') // 替换不间断空格为普通空格
+        .trim();
+
       if (content) {
         switch (currentSection) {
         case 'features':
@@ -176,6 +191,9 @@ function fetchGitHubReleases() {
     const req = https.request(options, (res) => {
       let data = '';
 
+      // 设置编码为 utf8 确保正确处理中文字符
+      res.setEncoding('utf8');
+
       res.on('data', (chunk) => {
         data += chunk;
       });
@@ -241,9 +259,12 @@ async function generateFallbackVersions() {
       fs.mkdirSync(outputDir, { recursive: true });
     }
 
-    // 写入文件
+    // 写入文件，确保使用 UTF-8 编码并处理特殊字符
     const outputPath = path.join(outputDir, 'fallback-versions.json');
-    fs.writeFileSync(outputPath, JSON.stringify(outputData, null, 2), 'utf8');
+    const jsonString = JSON.stringify(outputData, null, 2)
+      .replace(/\uFFFD/g, '') // 移除任何替换字符
+      .replace(/[\u200B-\u200D\uFEFF]/g, ''); // 移除零宽字符
+    fs.writeFileSync(outputPath, jsonString, { encoding: 'utf8' });
 
     console.log(`✅ 备用版本数据已生成: ${outputPath}`);
     console.log(`📊 包含版本: ${versions.map(v => v.version).slice(0, 5).join(', ')}${versions.length > 5 ? '...' : ''}`);
@@ -296,9 +317,12 @@ async function generateFallbackVersions() {
       fs.mkdirSync(outputDir, { recursive: true });
     }
 
-    // 写入降级数据
+    // 写入降级数据，确保使用 UTF-8 编码
     const outputPath = path.join(outputDir, 'fallback-versions.json');
-    fs.writeFileSync(outputPath, JSON.stringify(fallbackData, null, 2), 'utf8');
+    const jsonString = JSON.stringify(fallbackData, null, 2)
+      .replace(/\uFFFD/g, '') // 移除任何替换字符
+      .replace(/[\u200B-\u200D\uFEFF]/g, ''); // 移除零宽字符
+    fs.writeFileSync(outputPath, jsonString, { encoding: 'utf8' });
 
     console.log(`⚠️  已生成降级备用数据: ${outputPath}`);
   }
@@ -395,9 +419,12 @@ async function generateDownloadData() {
       fs.mkdirSync(outputDir, { recursive: true });
     }
 
-    // 写入文件
+    // 写入文件，确保使用 UTF-8 编码并处理特殊字符
     const outputPath = path.join(outputDir, 'download-data.json');
-    fs.writeFileSync(outputPath, JSON.stringify(outputData, null, 2), 'utf8');
+    const jsonString = JSON.stringify(outputData, null, 2)
+      .replace(/\uFFFD/g, '') // 移除任何替换字符
+      .replace(/[\u200B-\u200D\uFEFF]/g, ''); // 移除零宽字符
+    fs.writeFileSync(outputPath, jsonString, { encoding: 'utf8' });
 
     console.log(`✅ 下载页面数据已生成: ${outputPath}`);
     console.log(`📊 最新正式版本: ${latestRelease.version} (${latestRelease.date})`);
@@ -479,9 +506,12 @@ async function generateDownloadData() {
       fs.mkdirSync(outputDir, { recursive: true });
     }
 
-    // 写入降级数据
+    // 写入降级数据，确保使用 UTF-8 编码
     const outputPath = path.join(outputDir, 'download-data.json');
-    fs.writeFileSync(outputPath, JSON.stringify(fallbackData, null, 2), 'utf8');
+    const jsonString = JSON.stringify(fallbackData, null, 2)
+      .replace(/\uFFFD/g, '') // 移除任何替换字符
+      .replace(/[\u200B-\u200D\uFEFF]/g, ''); // 移除零宽字符
+    fs.writeFileSync(outputPath, jsonString, { encoding: 'utf8' });
 
     console.log(`⚠️  已生成降级下载数据: ${outputPath}`);
   }
