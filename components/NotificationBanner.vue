@@ -73,7 +73,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  message: '本网站内容目前使用 AI 生成，不保证内容准确性；Counters 现处于开发阶段，仍可能出现错误，欢迎试用并提供反馈。',
+  message: '本网站使用 AI 辅助生成；Counters 现处于开发阶段，仍可能出现错误，欢迎试用并提供反馈。',
   closable: true
 })
 

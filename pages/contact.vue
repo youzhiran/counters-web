@@ -232,6 +232,13 @@ const contactChannels = [
     action: '前往 GitHub'
   },
   {
+    title: '反馈问卷',
+    description: '填写反馈问卷，帮助我们更好地了解您的需求',
+    icon: '📝',
+    link: 'https://docs.qq.com/form/page/DT1Fudkd4bGxZR0J4',
+    action: '填写问卷'
+  },
+  {
     title: '开发者网站',
     description: '访问开发者个人网站了解更多信息',
     icon: '🌐',
@@ -251,6 +258,14 @@ const contactChannels = [
     icon: '👥',
     link: 'https://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=4HLuYULaCCj5Pfkd6HasSmZqnq9FHZV3&authKey=X9KtEqWOptWr%2BXY3fTUx0%2BWyX%2FXZvzxFIeTKm4%2BhwltWhZm9LFVee%2Bd%2FM6L9d6Sy&noverify=0&group_code=706133694',
     action: '加入讨论'
+  },
+  {
+    title: '其他渠道',
+    description: '更多联系方式正在筹备中，敬请期待',
+    icon: '🔗',
+    link: '#',
+    action: '敬请期待',
+    disabled: true
   }
 ]
 
