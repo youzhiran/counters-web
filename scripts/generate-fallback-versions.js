@@ -384,14 +384,14 @@ async function generateDownloadData() {
         status: 'recommended'
       },
       {
-        name: 'macOS',
-        icon: '🍎',
-        description: '正在适配中',
-        version: '~',
-        size: '~',
-        downloadUrl: `https://github.com/youzhiran/counters/releases/latest/download/counters-${latestRelease.version.replace(/^v/, '')}-macos.dmg`,
-        recommended: false,
-        status: 'pending'
+          name: 'HarmonyOS',
+          icon: '🌸',
+          description: '即将适配',
+          version: '~',
+          size: '~',
+          downloadUrl: `https://github.com/youzhiran/counters/releases/latest/download/counters-${latestRelease.version.replace(/^v/, '')}-harmonyos.apk`,
+          recommended: false,
+          status: 'pending'
       },
       {
         name: 'Linux',
@@ -402,7 +402,7 @@ async function generateDownloadData() {
         downloadUrl: `https://github.com/youzhiran/counters/releases/latest/download/counters-${latestRelease.version.replace(/^v/, '')}-linux-amd64.tar.gz`,
         recommended: false,
         status: 'pending'
-      }
+      },
     ];
 
     // 生成输出数据
@@ -487,6 +487,16 @@ async function generateDownloadData() {
         version: '~',
         size: '~',
         downloadUrl: 'https://github.com/youzhiran/counters/releases/latest/download/counters-0.10.7-rc3-linux-amd64.tar.gz',
+        recommended: false,
+        status: 'pending'
+      },
+      {
+        name: 'HarmonyOS',
+        icon: '🌸',
+        description: '即将适配',
+        version: '~',
+        size: '~',
+        downloadUrl: 'https://github.com/youzhiran/counters/releases/latest/download/counters-0.10.7-rc3-harmonyos.apk',
         recommended: false,
         status: 'pending'
       }

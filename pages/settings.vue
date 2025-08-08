@@ -4,7 +4,7 @@
       <!-- 页面标题 -->
       <div class="text-center mb-12">
         <h1 class="text-3xl font-bold text-gray-900 mb-4">
-          🔧 隐藏设置
+          🔧 高级设置
         </h1>
         <p class="text-lg text-gray-600">
           管理网站的高级设置和隐私选项
@@ -147,13 +147,13 @@
 <script setup lang="ts">
 // 页面元数据
 definePageMeta({
-  title: '隐藏设置 - Counters',
+  title: '高级设置 - Counters',
   description: '管理Counters网站的高级设置和隐私选项'
 })
 
 // SEO设置
 useSeoMeta({
-  title: '隐藏设置 - Counters',
+  title: '高级设置 - Counters',
   description: '管理Counters网站的高级设置和隐私选项',
   robots: 'noindex, nofollow' // 不让搜索引擎索引此页面
 })
