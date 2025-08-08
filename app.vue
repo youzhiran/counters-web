@@ -34,7 +34,6 @@ useSeoMeta({
   ogTitle: 'Counters - 桌游计分器',
   description: '一款专业的多平台桌游计分应用，支持扑克牌、斗地主、麻将等多种游戏类型，具备局域网联机、计分走势图等特色功能。',
   ogDescription: '一款专业的多平台桌游计分应用，支持扑克牌、斗地主、麻将等多种游戏类型，具备局域网联机、计分走势图等特色功能。',
-  ogImage: '/og-image.png',
   twitterCard: 'summary_large_image'
 })
 

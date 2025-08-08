@@ -9,7 +9,7 @@
 - **框架**: Nuxt.js 3
 - **前端**: Vue 3 + TypeScript
 - **样式**: Tailwind CSS
-- **字体**: Google Fonts (Inter + Noto Sans SC)
+- **字体**: PingFang SC, HarmonyOS Sans SC
 - **图片**: Nuxt Image
 - **部署**: 支持 SSR/SSG
 
@@ -27,8 +27,11 @@
 
 ### 环境要求
 
-- Node.js 18+
-- npm 或 yarn 或 pnpm
+推荐使用 choco 安装 nodejs 22.18.0
+
+```bash
+choco install nodejs --version="22.18.0"
+```
 
 ### 安装依赖
 
