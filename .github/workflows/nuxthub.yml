@@ -21,11 +21,15 @@ jobs:
           node-version: 22
           cache: 'npm'
 
-      - name: Ensure NuxtHub module is installed
-        run: npx nuxthub@latest ensure
+      - name: Clean conflicting lock files
+        run: |
+          rm -f package-lock.json yarn.lock
 
       - name: Install dependencies
         run: npm install
+
+      - name: Ensure NuxtHub module is installed
+        run: npx nuxthub@latest ensure
 
       - name: Build & Deploy to NuxtHub
         uses: nuxt-hub/action@v2
