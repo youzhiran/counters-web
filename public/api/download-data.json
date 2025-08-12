@@ -19,7 +19,7 @@
     "fixes": [],
     "url": "https://github.com/youzhiran/counters/releases/tag/v0.11.3-rc1",
     "author": "github-actions[bot]",
-    "downloadCount": 42
+    "downloadCount": 53
   },
   "platforms": [
     {
@@ -43,12 +43,12 @@
       "status": "recommended"
     },
     {
-      "name": "macOS",
-      "icon": "🍎",
-      "description": "正在适配中",
+      "name": "HarmonyOS",
+      "icon": "🌸",
+      "description": "即将适配",
       "version": "~",
       "size": "~",
-      "downloadUrl": "https://github.com/youzhiran/counters/releases/latest/download/counters-0.11.3-rc1-macos.dmg",
+      "downloadUrl": "https://github.com/youzhiran/counters/releases/latest/download/counters-0.11.3-rc1-harmonyos.apk",
       "recommended": false,
       "status": "pending"
     },
@@ -63,6 +63,6 @@
       "status": "pending"
     }
   ],
-  "generatedAt": "2025-08-07T01:37:28.530Z",
+  "generatedAt": "2025-08-08T14:35:14.050Z",
   "source": "github-api"
 }

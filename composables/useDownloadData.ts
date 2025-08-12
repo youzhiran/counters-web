@@ -91,12 +91,12 @@ export const useDownloadData = () => {
           status: 'recommended'
         },
         {
-          name: 'macOS',
-          icon: '🍎',
-          description: '正在适配中',
+          name: 'HarmonyOS',
+          icon: '🌸',
+          description: '即将适配',
           version: '~',
           size: '~',
-          downloadUrl: 'https://github.com/youzhiran/counters/releases/latest/download/counters-0.10.7-rc3-macos.dmg',
+          downloadUrl: 'https://github.com/youzhiran/counters/releases/latest/download/counters-0.10.7-rc3-harmonyos.apk',
           recommended: false,
           status: 'pending'
         },
@@ -127,7 +127,7 @@ export const useDownloadData = () => {
 
       // 尝试从静态文件加载
       const staticData = await loadStaticDownloadData()
-      
+
       if (staticData) {
         downloadData.value = staticData
         showingFallback.value = staticData.source === 'fallback'
@@ -142,7 +142,7 @@ export const useDownloadData = () => {
     } catch (err) {
       console.error('加载下载数据失败:', err)
       error.value = err instanceof Error ? err.message : '加载下载数据失败'
-      
+
       // 出错时使用硬编码回退数据
       downloadData.value = getFallbackDownloadData()
       showingFallback.value = true
