@@ -276,6 +276,11 @@ const timeline = [
     description: '全面优化用户界面，提升使用体验'
   },
   {
+    date: '2025年7月',
+    title: '数据管理',
+    description: '实现数据导入导出与备份，提升使用体验'
+  },
+  {
     date: '未来',
     title: '持续发展',
     description: '继续完善功能，扩展更多游戏类型支持'
