@@ -1,25 +1,19 @@
 {
   "latestRelease": {
-    "version": "v0.11.3-rc1",
-    "date": "2025年7月25日",
+    "version": "v0.11.4-rc2",
+    "date": "2025年8月12日",
     "type": "release",
     "features": [
-      "新增匿名统计设置项（但...作为一个开源免费的应用，若关闭统计，开发者看到没人使用 Counters ，可能就没动力更新了......😢😭",
-      "新增网络延迟提示组件，可在联机客户端实时查看与主机的ping值",
-      "新增「快速体验」功能，无需设置玩家和模板信息，即刻可开始计分体验",
-      "新增屏幕常亮设置，可在计分时防止自动锁屏",
-      "消息提示卡片可滑动删除"
+      "本次更新主要为修复一些问题，新增功能可参考上一版说明"
     ],
     "improvements": [
-      "增加了一些使用提示",
-      "界面部分图标更新",
-      "升级 Flutter 3.32.6，更新依赖",
-      "其他问题修复"
+      "升级 Flutter 3.32.8，更新依赖",
+      "修复「快速体验」下的一些问题"
     ],
     "fixes": [],
-    "url": "https://github.com/youzhiran/counters/releases/tag/v0.11.3-rc1",
+    "url": "https://github.com/youzhiran/counters/releases/tag/v0.11.4-rc2",
     "author": "github-actions[bot]",
-    "downloadCount": 53
+    "downloadCount": 1
   },
   "platforms": [
     {
@@ -28,7 +22,7 @@
       "description": "推荐平台，功能完整",
       "version": "Android 5.0+",
       "size": "约11MB",
-      "downloadUrl": "https://github.com/youzhiran/counters/releases/download/v0.11.3-rc1/counters-0.11.3-rc1-android-arm64-v8a.apk",
+      "downloadUrl": "https://github.com/youzhiran/counters/releases/download/v0.11.4-rc2/counters-0.11.4-rc2-android-arm64-v8a.apk",
       "recommended": true,
       "status": "recommended"
     },
@@ -38,7 +32,7 @@
       "description": "桌面端体验，功能完整",
       "version": "Windows 10+",
       "size": "约13MB",
-      "downloadUrl": "https://github.com/youzhiran/counters/releases/download/v0.11.3-rc1/counters-0.11.3-rc1-windows-x64.zip",
+      "downloadUrl": "https://github.com/youzhiran/counters/releases/download/v0.11.4-rc2/counters-0.11.4-rc2-windows-x64.zip",
       "recommended": true,
       "status": "recommended"
     },
@@ -48,7 +42,7 @@
       "description": "即将适配",
       "version": "~",
       "size": "~",
-      "downloadUrl": "https://github.com/youzhiran/counters/releases/latest/download/counters-0.11.3-rc1-harmonyos.apk",
+      "downloadUrl": "https://github.com/youzhiran/counters/releases/latest/download/counters-0.11.4-rc2-harmonyos.apk",
       "recommended": false,
       "status": "pending"
     },
@@ -58,11 +52,11 @@
       "description": "正在适配中",
       "version": "~",
       "size": "~",
-      "downloadUrl": "https://github.com/youzhiran/counters/releases/latest/download/counters-0.11.3-rc1-linux-amd64.tar.gz",
+      "downloadUrl": "https://github.com/youzhiran/counters/releases/latest/download/counters-0.11.4-rc2-linux-amd64.tar.gz",
       "recommended": false,
       "status": "pending"
     }
   ],
-  "generatedAt": "2025-08-08T14:35:14.050Z",
+  "generatedAt": "2025-08-13T02:52:25.114Z",
   "source": "github-api"
 }

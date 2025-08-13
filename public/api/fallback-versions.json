@@ -1,6 +1,22 @@
 {
   "versions": [
     {
+      "version": "v0.11.4-rc2",
+      "date": "2025年8月12日",
+      "type": "release",
+      "features": [
+        "本次更新主要为修复一些问题，新增功能可参考上一版说明"
+      ],
+      "improvements": [
+        "升级 Flutter 3.32.8，更新依赖",
+        "修复「快速体验」下的一些问题"
+      ],
+      "fixes": [],
+      "url": "https://github.com/youzhiran/counters/releases/tag/v0.11.4-rc2",
+      "author": "github-actions[bot]",
+      "downloadCount": 1
+    },
+    {
       "version": "v0.11.3-rc1",
       "date": "2025年7月25日",
       "type": "release",
@@ -20,7 +36,7 @@
       "fixes": [],
       "url": "https://github.com/youzhiran/counters/releases/tag/v0.11.3-rc1",
       "author": "github-actions[bot]",
-      "downloadCount": 53
+      "downloadCount": 71
     },
     {
       "version": "v0.10.11-rc4",
@@ -166,7 +182,7 @@
       "downloadCount": 2
     }
   ],
-  "generatedAt": "2025-08-08T14:35:12.007Z",
+  "generatedAt": "2025-08-13T02:52:24.238Z",
   "source": "github-api",
-  "count": 8
+  "count": 9
 }

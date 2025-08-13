@@ -46,12 +46,13 @@
             <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
               下载详细的使用说明PDF文档，包含完整的功能介绍和操作指南
             </p>
-            <NuxtLink
-                to="https://proxy.gitwarp.com/https://github.com/youzhiran/counters-web/blob/master/file/Counters%E7%94%A8%E6%88%B7%E8%AF%B4%E6%98%8E%E4%B9%A6250813.pdf"
-                class="btn-primary bg-primary-600 text-white hover:bg-primary-700 px-8 py-3 text-lg"
+            <a
+                href="https://proxy.gitwarp.com/https://github.com/youzhiran/counters-web/blob/master/file/Counters%E7%94%A8%E6%88%B7%E8%AF%B4%E6%98%8E%E4%B9%A6250813.zip"
+                download="Counters用户说明书.pdf"
+                class="btn-primary bg-primary-600 text-white hover:bg-primary-700 px-8 py-3 text-lg inline-block"
             >
               下载使用说明
-            </NuxtLink>
+            </a>
           </div>
         </div>
       </div>
