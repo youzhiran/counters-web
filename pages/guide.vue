@@ -35,8 +35,30 @@
       </div>
     </section>
 
-    <!-- 详细教程 -->
+    <!-- 使用说明 -->
     <section class="py-20 bg-gray-50">
+      <div class="container-apple">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-2xl font-bold text-gray-900 mb-12 text-center animate-on-scroll">
+            使用说明
+          </h2>
+          <div class="text-center">
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+              下载详细的使用说明PDF文档，包含完整的功能介绍和操作指南
+            </p>
+            <NuxtLink
+                to="https://proxy.gitwarp.com/https://github.com/youzhiran/counters-web/blob/master/file/Counters%E7%94%A8%E6%88%B7%E8%AF%B4%E6%98%8E%E4%B9%A6250813.pdf"
+                class="btn-primary bg-primary-600 text-white hover:bg-primary-700 px-8 py-3 text-lg"
+            >
+              下载使用说明
+            </NuxtLink>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 详细教程 -->
+    <section class="py-20 bg-white">
       <div class="container-apple">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-2xl font-bold text-gray-900 mb-12 text-center animate-on-scroll">
@@ -145,7 +167,7 @@
                   </div>
                   <div>
                     <h4 class="font-medium text-gray-900">加入游戏</h4>
-                    <p class="text-gray-600 text-sm">主页 → 点击"连接到局域网计分" →  找到主机 → 点击连接</p>
+                    <p class="text-gray-600 text-sm">主页 → 点击"连接到局域网计分" → 找到主机 → 点击连接</p>
                   </div>
                   <div>
                     <h4 class="font-medium text-gray-900">同步计分</h4>
@@ -160,7 +182,7 @@
     </section>
 
     <!-- 高级功能 -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-gray-50">
       <div class="container-apple">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-2xl font-bold text-gray-900 mb-12 text-center animate-on-scroll">
@@ -183,7 +205,7 @@
     </section>
 
     <!-- 常见问题 -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-white">
       <div class="container-apple">
         <div class="max-w-4xl mx-auto">
           <h2 class="text-2xl font-bold text-gray-900 mb-12 text-center animate-on-scroll">
