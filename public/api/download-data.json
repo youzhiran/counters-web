@@ -39,12 +39,12 @@
     {
       "name": "HarmonyOS",
       "icon": "🌸",
-      "description": "即将适配",
-      "version": "~",
+      "description": "邀请测试中，欢迎反馈问题！",
+      "version": "测试版",
       "size": "~",
-      "downloadUrl": "https://github.com/youzhiran/counters/releases/latest/download/counters-0.11.4-rc2-harmonyos.apk",
+      "downloadUrl": "https://appgallery.huawei.com/link/invite-test-wap?taskId=54a9d0077917cb3b02f0fb3f7d372eae",
       "recommended": false,
-      "status": "pending"
+      "status": "available"
     },
     {
       "name": "Linux",

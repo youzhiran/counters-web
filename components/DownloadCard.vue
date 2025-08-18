@@ -39,48 +39,92 @@
       <!-- 下载按钮区域 - 固定高度确保对齐 -->
       <div class="space-y-3 h-[120px] flex flex-col">
         <template v-if="platform.status !== 'pending'">
-          <!-- GitHub 下载按钮 -->
-          <a
-            :href="platform.downloadUrl"
-            target="_blank"
-            rel="noopener noreferrer"
-            :class="[
-              'btn-apple w-full',
-              platform.status === 'recommended'
-                ? 'btn-primary'
-                : 'btn-secondary'
-            ]"
-          >
-            <svg class="w-4 h-4 mr-2"
-fill="none"
-stroke="currentColor"
-viewBox="0 0 24 24">
-              <path stroke-linecap="round"
-stroke-linejoin="round"
-stroke-width="2"
-d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-            GitHub下载
-          </a>
+          <!-- HarmonyOS 特殊按钮布局 -->
+          <template v-if="platform.name === 'HarmonyOS'">
+            <!-- 参与邀测按钮 -->
+            <a
+              :href="platform.downloadUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-apple w-full btn-primary"
+            >
+              <svg class="w-4 h-4 mr-2"
+                   fill="none"
+                   stroke="currentColor"
+                   viewBox="0 0 24 24">
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              参与邀测
+            </a>
 
-          <!-- 镜像下载按钮 -->
-          <a
-            :href="getAcceleratedDownloadUrl(platform.downloadUrl)"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-apple w-full btn-secondary bg-green-600 hover:bg-green-700 text-white border-green-600 hover:border-green-700"
-          >
-            <svg class="w-4 h-4 mr-2"
-fill="none"
-stroke="currentColor"
-viewBox="0 0 24 24">
-              <path stroke-linecap="round"
-stroke-linejoin="round"
-stroke-width="2"
-d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            镜像下载
-          </a>
+            <!-- 反馈问题按钮 -->
+            <a
+              href="https://www.kdocs.cn/l/cb8iIKNE1CQc"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-apple w-full btn-secondary bg-orange-600 hover:bg-orange-700 text-white border-orange-600 hover:border-orange-700"
+            >
+              <svg class="w-4 h-4 mr-2"
+                   fill="none"
+                   stroke="currentColor"
+                   viewBox="0 0 24 24">
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              </svg>
+              反馈问题
+            </a>
+          </template>
+
+          <!-- 其他平台的常规按钮布局 -->
+          <template v-else>
+            <!-- GitHub 下载按钮 -->
+            <a
+              :href="platform.downloadUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              :class="[
+                'btn-apple w-full',
+                platform.status === 'recommended'
+                  ? 'btn-primary'
+                  : 'btn-secondary'
+              ]"
+            >
+              <svg class="w-4 h-4 mr-2"
+                   fill="none"
+                   stroke="currentColor"
+                   viewBox="0 0 24 24">
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              GitHub下载
+            </a>
+
+            <!-- 镜像下载按钮 -->
+            <a
+              :href="getAcceleratedDownloadUrl(platform.downloadUrl)"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-apple w-full btn-secondary bg-green-600 hover:bg-green-700 text-white border-green-600 hover:border-green-700"
+            >
+              <svg class="w-4 h-4 mr-2"
+                   fill="none"
+                   stroke="currentColor"
+                   viewBox="0 0 24 24">
+                <path stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              镜像下载
+            </a>
+          </template>
         </template>
 
         <template v-else>
@@ -118,6 +162,7 @@ interface Platform {
   downloadUrl: string
   recommended: boolean
   status?: 'recommended' | 'pending' | 'available'
+  feedbackUrl?: string
 }
 
 interface Props {
