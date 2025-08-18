@@ -387,9 +387,9 @@ async function generateDownloadData() {
           name: 'HarmonyOS',
           icon: '🌸',
           description: '邀请测试中，欢迎反馈问题！',
-          version: '测试版',
-          size: '~',
-          downloadUrl: 'https://appgallery.huawei.com/link/invite-test-wap?taskId=54a9d0077917cb3b02f0fb3f7d372eae&invitationCode=3HuUmiYdHRh',
+          version: 'HarmonyOS 5.0+',
+          size: '约11MB',
+          downloadUrl: 'https://appgallery.huawei.com/link/invite-test-wap?taskId=54a9d0077917cb3b02f0fb3f7d372eae&invitationCode=ANB4gPOnAbY',
           recommended: false,
           status: 'available'
       },
@@ -494,9 +494,9 @@ async function generateDownloadData() {
         name: 'HarmonyOS',
         icon: '🌸',
         description: '邀请测试中，欢迎反馈问题！',
-        version: '测试版',
-        size: '~',
-        downloadUrl: 'https://appgallery.huawei.com/link/invite-test-wap?taskId=54a9d0077917cb3b02f0fb3f7d372eae&invitationCode=3HuUmiYdHRh',
+        version: 'HarmonyOS 5.0+',
+        size: '约11MB',
+        downloadUrl: 'https://appgallery.huawei.com/link/invite-test-wap?taskId=54a9d0077917cb3b02f0fb3f7d372eae&invitationCode=ANB4gPOnAbY',
         recommended: false,
         status: 'available'
       }
