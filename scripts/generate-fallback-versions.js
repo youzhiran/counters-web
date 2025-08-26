@@ -386,7 +386,7 @@ async function generateDownloadData() {
       {
           name: 'HarmonyOS',
           icon: '🌸',
-          description: '邀请测试中，欢迎反馈问题！',
+          description: 'v0.11.6001已更新，邀请测试中，欢迎反馈问题！',
           version: 'HarmonyOS 5.0+',
           size: '约11MB',
           downloadUrl: 'https://appgallery.huawei.com/link/invite-test-wap?taskId=f8b48f886301398e60a245656cfb38dc&invitationCode=ANB4gPOnAbY',
@@ -493,7 +493,7 @@ async function generateDownloadData() {
       {
         name: 'HarmonyOS',
         icon: '🌸',
-        description: '邀请测试中，欢迎反馈问题！',
+        description: 'v0.11.6001已更新，邀请测试中，欢迎反馈问题！',
         version: 'HarmonyOS 5.0+',
         size: '约11MB',
         downloadUrl: 'https://appgallery.huawei.com/link/invite-test-wap?taskId=f8b48f886301398e60a245656cfb38dc&invitationCode=ANB4gPOnAbY',
