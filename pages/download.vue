@@ -4,7 +4,7 @@
     <section class="gradient-bg py-16">
       <div class="container-apple text-center">
         <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 animate-on-scroll">
-          下载 Counters
+          下载 得益计分(原Counters)
         </h1>
         <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto animate-on-scroll">
           选择适合您设备的版本，开始您的桌游计分之旅
@@ -309,18 +309,18 @@ const platforms = getPlatforms
 // SEO 配置 - 使用动态版本信息
 const seoTitle = computed(() => {
   const version = latestRelease.value?.version || 'v0.10.7-rc3'
-  return `下载 - Counters 桌游计分器`
+  return `下载 - 得益计分 桌游计分器`
 })
 
 const seoDescription = computed(() => {
   const version = latestRelease.value?.version || 'v0.10.7-rc3'
-  return `下载 Counters 桌游计分器，支持 Android、Windows、macOS、Linux 多平台。最新版本 ${version}，免费开源。`
+  return `下载 得益计分 桌游计分器，支持 Android、Windows、macOS、Linux 多平台。最新版本 ${version}，免费开源。`
 })
 
 useSeoMeta({
   title: seoTitle,
   description: seoDescription,
-  keywords: 'Counters下载,桌游计分器下载,Android,Windows,macOS,Linux,多平台应用'
+  keywords: '得益计分下载,桌游计分器下载,Android,Windows,macOS,Linux,多平台应用'
 })
 
 </script>

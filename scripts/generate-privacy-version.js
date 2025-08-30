@@ -42,7 +42,7 @@ function generatePrivacyVersion() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隐私政策版本信息 - Counters</title>
+    <title>隐私政策版本信息 - 得益计分</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -115,7 +115,7 @@ function generatePrivacyVersion() {
 <body>
     <div class="header">
         <h1>隐私政策版本信息</h1>
-        <p>Counters 桌游计分器</p>
+        <p>得益计分 桌游计分器</p>
     </div>
     
     <div class="version-card">

@@ -7,7 +7,7 @@
           更新日志
         </h1>
         <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto animate-on-scroll">
-          了解 Counters 的最新功能和改进
+          了解 得益计分 的最新功能和改进
         </p>
       </div>
     </section>

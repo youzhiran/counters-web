@@ -41,7 +41,7 @@
         <template v-if="platform.status !== 'pending'">
           <!-- HarmonyOS 特殊按钮布局 -->
           <template v-if="platform.name === 'HarmonyOS'">
-            <!-- 参与邀测按钮 -->
+            <!-- 鸿蒙下载按钮 -->
             <a
               :href="platform.downloadUrl"
               target="_blank"
@@ -57,7 +57,7 @@
                       stroke-width="2"
                       d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
               </svg>
-              参与邀测
+              鸿蒙下载
             </a>
 
             <!-- 反馈问题按钮 -->

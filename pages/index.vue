@@ -99,7 +99,7 @@
           </div>
           <div class="animate-on-scroll">
             <div class="text-4xl font-bold text-primary-600 mb-2">多平台</div>
-            <div class="text-lg text-gray-600">Android/Windows (待适配：macOS/Linux)</div>
+            <div class="text-lg text-gray-600">Android/Windows/HarmonyOS</div>
           </div>
           <div class="animate-on-scroll">
             <div class="text-4xl font-bold text-primary-600 mb-2">开源</div>
@@ -117,7 +117,7 @@
             准备开始你的桌游之旅？
           </h2>
           <p class="text-lg sm:text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            立即下载 Counters，体验专业的桌游计分功能
+            立即下载 得益计分，体验专业的桌游计分功能
           </p>
           <NuxtLink
             to="/download"

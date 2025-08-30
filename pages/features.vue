@@ -7,7 +7,7 @@
           功能特性
         </h1>
         <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto animate-on-scroll">
-          探索 Counters 的强大功能，为您的桌游体验提供完整解决方案
+          探索 得益计分 的强大功能，为您的桌游体验提供完整解决方案
         </p>
       </div>
     </section>
@@ -196,7 +196,7 @@
             体验这些强大功能
           </h2>
           <p class="text-lg sm:text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            立即下载 Counters，享受专业的桌游计分体验
+            立即下载 得益计分，享受专业的桌游计分体验
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <NuxtLink
@@ -221,8 +221,8 @@
 <script setup lang="ts">
 // SEO 配置
 useSeoMeta({
-  title: '功能特性 - Counters 桌游计分器',
-  description: '探索 Counters 的强大功能：多游戏支持、局域网联机、智能走势图、玩家管理等专业计分功能。',
+  title: '功能特性 - 得益计分 桌游计分器',
+  description: '探索 得益计分 的强大功能：多游戏支持、局域网联机、智能走势图、玩家管理等专业计分功能。',
   keywords: '桌游计分功能,局域网联机,计分走势图,多游戏支持,数据管理'
 })
 </script>

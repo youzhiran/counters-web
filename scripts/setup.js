@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
 
-console.log('🚀 Counters 官方网站设置脚本')
+console.log('🚀 得益计分 官方网站设置脚本')
 console.log('================================')
 
 // 检查 Node.js 版本

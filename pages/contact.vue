@@ -207,9 +207,9 @@
 <script setup lang="ts">
 // SEO 配置
 useSeoMeta({
-  title: '联系反馈 - Counters 桌游计分器',
-  description: '联系 Counters 开发团队，提交 Bug 报告、功能建议或使用咨询。多种反馈渠道，快速响应用户需求。',
-  keywords: 'Counters联系方式,Bug报告,功能建议,用户反馈,技术支持'
+  title: '联系反馈 - 得益计分 桌游计分器',
+  description: '联系 得益计分 开发团队，提交 Bug 报告、功能建议或使用咨询。多种反馈渠道，快速响应用户需求。',
+  keywords: '得益计分联系方式,Bug报告,功能建议,用户反馈,技术支持'
 })
 
 // // 反馈表单

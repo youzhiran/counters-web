@@ -35,9 +35,9 @@
             </h2>
             <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
               <p class="mb-6">
-                欢迎您使用 <strong>Counters</strong>
+                欢迎您使用 <strong>得益计分</strong>
                 ！我们非常重视用户的隐私和个人信息保护。您在使用我们的产品与/或服务时，我们可能会收集和使用您的相关信息。我们希望通过本《隐私政策》（以下简称"本政策"）向您清晰地介绍我们对您个人信息的处理方式，因此我们建议您完整地阅读本政策，以帮助您了解维护自己隐私权的方式。
-                <strong>请注意，本隐私政策仅针对最新版 Counters 应用。</strong>
+                <strong>请注意，本隐私政策仅针对最新版 得益计分 应用。</strong>
               </p>
               <div class="bg-primary-50 border-l-4 border-primary-500 p-6 rounded-r-lg">
                 <p class="text-primary-800 font-medium">
@@ -59,7 +59,7 @@
             </h2>
             <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
               <p>
-                在您使用 Counters 的过程中，我们会在合法、正当、必要的原则下，收集您在使用服务时主动提供或因为使用服务而产生的信息，用以向您提供服务、优化我们的服务。
+                在您使用 得益计分 的过程中，我们会在合法、正当、必要的原则下，收集您在使用服务时主动提供或因为使用服务而产生的信息，用以向您提供服务、优化我们的服务。
               </p>
               <div class="bg-green-50 border border-green-200 rounded-lg p-6 mt-6">
                 <div class="flex items-center mb-3">
@@ -75,7 +75,7 @@ stroke-width="2"
                   <h3 class="text-lg font-semibold text-green-800">当前状态</h3>
                 </div>
                 <p class="text-green-700 font-medium">
-                  目前 Counters 应用未收集任何个人信息。
+                  目前 得益计分 应用未收集任何个人信息。
                 </p>
               </div>
             </div>

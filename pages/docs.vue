@@ -7,7 +7,7 @@
           技术文档
         </h1>
         <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto animate-on-scroll">
-          深入了解 Counters 的技术架构和开发细节
+          深入了解 得益计分 的技术架构和开发细节
         </p>
       </div>
     </section>
@@ -175,9 +175,9 @@ dart setup.dart android</code></pre>
 <script setup lang="ts">
 // SEO 配置
 useSeoMeta({
-  title: '技术文档 - Counters 桌游计分器',
-  description: 'Counters 技术文档，包括架构设计、开发环境、API 参考和贡献指南。',
-  keywords: 'Counters技术文档,Flutter开发,开源项目,API文档,贡献指南'
+  title: '技术文档 - 得益计分 桌游计分器',
+  description: '得益计分 技术文档，包括架构设计、开发环境、API 参考和贡献指南。',
+  keywords: '得益计分技术文档,Flutter开发,开源项目,API文档,贡献指南'
 })
 
 // 技术栈

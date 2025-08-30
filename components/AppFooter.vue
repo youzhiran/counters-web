@@ -8,7 +8,7 @@
             <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
               <span class="text-white font-bold text-sm">C</span>
             </div>
-            <span class="text-xl font-semibold">Counters</span>
+            <span class="text-xl font-semibold">得益计分</span>
           </div>
           <p class="text-gray-400 mb-6 max-w-md">
             一款专业的多平台桌游计分应用，让每一局游戏都精彩纷呈。支持多种游戏类型，具备局域网联机、计分走势图等特色功能。

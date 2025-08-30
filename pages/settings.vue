@@ -147,14 +147,14 @@
 <script setup lang="ts">
 // 页面元数据
 definePageMeta({
-  title: '高级设置 - Counters',
-  description: '管理Counters网站的高级设置和隐私选项'
+  title: '高级设置 - 得益计分',
+  description: '管理得益计分网站的高级设置和隐私选项'
 })
 
 // SEO设置
 useSeoMeta({
-  title: '高级设置 - Counters',
-  description: '管理Counters网站的高级设置和隐私选项',
+  title: '高级设置 - 得益计分',
+  description: '管理得益计分网站的高级设置和隐私选项',
   robots: 'noindex, nofollow' // 不让搜索引擎索引此页面
 })
 

@@ -7,7 +7,7 @@
           关于我们
         </h1>
         <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto animate-on-scroll">
-          了解 Counters 的故事和我们的使命
+          了解 得益计分 的故事和我们的使命
         </p>
       </div>
     </section>
@@ -94,7 +94,7 @@
           <div class="card-apple p-8 animate-on-scroll">
             <div class="text-center mb-8">
               <p class="text-lg text-gray-600">
-                Counters 的开发使用了众多开源项目和 AI 工具
+                得益计分 的开发使用了众多开源项目和 AI 工具
               </p>
             </div>
 
@@ -140,7 +140,7 @@
               开源项目
             </h2>
             <p class="text-lg text-gray-600 mb-8">
-              Counters 是一个完全开源的项目，欢迎社区贡献和参与
+              得益计分 是一个完全开源的项目，欢迎社区贡献和参与
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center">

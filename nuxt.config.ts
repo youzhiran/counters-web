@@ -18,7 +18,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' },
     layoutTransition: { name: 'layout', mode: 'out-in' },
     head: {
-      title: 'Counters - 桌游计分器',
+      title: '得益计分 - 桌游计分器',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -28,12 +28,12 @@ export default defineNuxtConfig({
         },
         { name: 'keywords', content: '桌游,计分器,扑克牌,斗地主,麻将,Flutter,多平台,局域网联机' },
         { name: 'author', content: 'counters.devyi.com' },
-        { property: 'og:title', content: 'Counters - 桌游计分器' },
+        { property: 'og:title', content: '得益计分 - 桌游计分器' },
         { property: 'og:description', content: '一款专业的多平台桌游计分应用' },
         { property: 'og:type', content: 'website' },
         { property: 'og:url', content: 'https://counters.devyi.com' },
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Counters - 桌游计分器' },
+        { name: 'twitter:title', content: '得益计分 - 桌游计分器' },
         { name: 'twitter:description', content: '一款专业的多平台桌游计分应用' }
       ],
       link: [

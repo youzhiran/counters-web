@@ -7,7 +7,7 @@
           使用指南
         </h1>
         <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto animate-on-scroll">
-          从安装到精通，全面掌握 Counters 的使用方法
+          从安装到精通，全面掌握 得益计分 的使用方法
         </p>
       </div>
     </section>

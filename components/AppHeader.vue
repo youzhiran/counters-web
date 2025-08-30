@@ -7,7 +7,7 @@
           <div class="w-8 h-8 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg flex items-center justify-center">
             <span class="text-white font-bold text-sm">C</span>
           </div>
-          <span class="text-xl font-semibold text-gray-900">Counters</span>
+          <span class="text-xl font-semibold text-gray-900">得益计分</span>
         </NuxtLink>
 
         <!-- 桌面导航 -->

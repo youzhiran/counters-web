@@ -1,4 +1,4 @@
-# Counters 官方网站
+# 得益计分 官方网站
 
 这是 Counters 桌游计分器的官方网站，使用 Nuxt.js 3 + Vue 3 + TypeScript 构建。
 

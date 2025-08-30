@@ -30,8 +30,8 @@ onMounted(() => {
 
 // 全局SEO配置
 useSeoMeta({
-  title: 'Counters - 桌游计分器',
-  ogTitle: 'Counters - 桌游计分器',
+  title: '得益计分 - 桌游计分器',
+  ogTitle: '得益计分 - 桌游计分器',
   description: '一款专业的多平台桌游计分应用，支持扑克牌、斗地主、麻将等多种游戏类型，具备局域网联机、计分走势图等特色功能。',
   ogDescription: '一款专业的多平台桌游计分应用，支持扑克牌、斗地主、麻将等多种游戏类型，具备局域网联机、计分走势图等特色功能。',
   twitterCard: 'summary_large_image'
@@ -43,7 +43,7 @@ useSeoMeta({
 useSchemaOrg([
   {
     '@type': 'WebSite',
-    name: 'Counters - 桌游计分器',
+    name: '得益计分 - 桌游计分器',
     url: 'https://counters.devyi.com',
     description: '一款专业的多平台桌游计分应用'
   },
