@@ -23,6 +23,8 @@
 </template>
 
 <script setup lang="ts">
+let observer: IntersectionObserver | null = null
+
 // 简化的动画效果 - 确保内容始终可见
 onMounted(() => {
   // 监听滚动事件，实现微妙的动画效果
@@ -31,7 +33,7 @@ onMounted(() => {
     rootMargin: '0px 0px -50px 0px'
   }
 
-  const observer = new IntersectionObserver((entries) => {
+  observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('in-view')
@@ -45,7 +47,9 @@ onMounted(() => {
     animatedElements.forEach((el) => {
       // 确保所有元素都是可见的
       el.classList.add('in-view')
-      observer.observe(el)
+      if (observer) {
+        observer.observe(el)
+      }
     })
   }
 
@@ -56,14 +60,20 @@ onMounted(() => {
   const router = useRouter()
   router.afterEach(() => {
     nextTick(() => {
+      // 在重新初始化前断开连接，以处理客户端导航
+      if (observer) {
+        observer.disconnect()
+      }
       initializeAnimations()
     })
   })
+})
 
-  // 清理函数
-  onUnmounted(() => {
+// 清理函数
+onUnmounted(() => {
+  if (observer) {
     observer.disconnect()
-  })
+  }
 })
 </script>
 
