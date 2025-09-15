@@ -95,7 +95,7 @@ export const useDownloadData = () => {
           icon: '🌸',
           description: '已上架鸿蒙商店，欢迎反馈问题！',
           version: 'HarmonyOS 5.0+',
-          size: 'v0.11.6004已更新，约10MB',
+          size: 'v0.11.11000已更新，约10MB',
           downloadUrl: 'https://appgallery.huawei.com/app/detail?id=com.devyi.counters.h&channelId=SHARE',
           recommended: false,
           status: 'available'
