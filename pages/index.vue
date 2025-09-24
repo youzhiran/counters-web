@@ -9,7 +9,7 @@
             <TextCarousel />
           </h1>
           <p class="text-responsive-md text-gray-600 mb-8 max-w-3xl mx-auto">
-            支持多种桌游类型，局域网实时同步，让每一局游戏都精彩纷呈
+            支持多种计分与联赛管理，可局域网实时联机
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <NuxtLink to="/download" class="btn-primary text-lg px-8 py-4">
